@@ -1,11 +1,15 @@
-/*create database TCC;*/
+/*
+drop database tcc;
+*/
+drop table funcionario;
+create database TCC;
 use TCC;
 create table Funcionario(
 FuncionarioID int auto_increment,
 Nome varchar(40) not null,
 Nascimento date,
+Salario int(6),
 Endereço varchar(50),
-
 primary key(FuncionarioID)
 );
 create table Produto(
@@ -34,3 +38,17 @@ NomeProduto varchar(30),
 Quantidade int,
 Descrição varchar(300)
 );
+
+show tables;
+desc cliente;
+insert into Cliente values(null,'Raphael','2001-11-05','Augusto Franco');
+
+
+show tables;
+desc Funcionario;
+insert into Funcionario values(null,"Lucas","2001-01-05",20000,"Franco");
+select * from funcionario;
+
+show tables;
+desc Produto;
+insert into Produto values(null,'Pizza Calabresa',30.0);
