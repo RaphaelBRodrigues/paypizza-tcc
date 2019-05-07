@@ -1,7 +1,6 @@
 /*
 drop database tcc;
 */
-drop table funcionario;
 create database TCC;
 use TCC;
 create table Funcionario(
@@ -23,6 +22,8 @@ ClienteID int auto_increment,
 Nome varchar(40) not null,
 Nascimento date,
 Endereço varchar(50),
+Senha text,
+Usuario text,
 primary key(ClienteID)
 );
 create table Compra(
