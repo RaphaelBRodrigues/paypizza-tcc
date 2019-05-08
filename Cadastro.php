@@ -70,17 +70,12 @@
         </nav>
                                   <?php
 
-                    $databaseHost = 'localhost';
-                    $databaseName = 'tcc';
-                    $databaseUsername = 'PayPizza';
-                    $databasePassword = 'paypizza';
-                    $mysqli = mysqli_connect($databaseHost,
-                    $databaseUsername,$databasePassword,$databaseName);
+                   
                     include_once('config.php');
                     ?>
 
 
-                    <form method="get" action="indexht.php">
+                    <form method="post" action="index.php">
                     <h2>Cadastro</h2>
                   
                        <i class="material-icons">person</i>
