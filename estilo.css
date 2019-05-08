@@ -1,0 +1,158 @@
+body{
+	margin: 0;
+	background-color: #FFFAFA;
+}
+.corpo{
+	margin: 0 auto;
+	width: 75%;
+
+}
+header{
+	width: 100%;
+	height: 1200px;
+	min-height: 300px;
+	/*background-color: blue;*/
+}
+.menu_cabeça{
+	color: white;
+	transition: transform 0.3s linear 0.1s;
+
+}
+.menu_cabeça:hover{
+	transform: scale(1.3);
+	transition: 0.6s;
+
+
+}
+#img_pizza_logo{
+	height: 9vh;
+	float: left;
+	min-width: 10%;
+	min-height: 6vh;
+
+}
+#nome_logo{
+
+	float: left;
+	margin-top: 1.5vh;
+	color: black;
+	margin-left: 10px;
+	font-size: 150%;
+	padding: 3px;
+	padding-left: 10px;
+	padding-right:  10px;
+	border: solid black 0.5px;
+
+	box-shadow: 3px 6px 5px black ;
+
+
+}
+
+.imagem-pizza{
+	margin-top: 15vh;
+	width: 70%;
+	min-height: 30%;
+	border-radius: 5%;
+	min-width: 90%;
+
+
+
+}
+header #pizza-pequena{
+	width: 30%;
+	margin-top: 1vh;
+
+
+
+}
+li{
+	font-size: 14px;
+}
+.imagens-siameses{
+	margin-top: 1vh;
+	width: 44.9%;
+	border-radius: 5%;
+	padding:5px;
+	height: 50vh;
+  	min-height: 30%;
+
+}
+div .navbar{
+    box-shadow: 0px 2px 5px rgb(0,0,0);
+}
+.promocoes{
+	width: 89%;
+	height: 150px;
+	background-color: black;
+	margin-left: 8vh;
+	border-radius: 10px;
+}
+.cardapio-corpo{
+	margin-top: 15vh;
+	width: 100%;
+	height: 800px;
+	/* background-color: pink; */
+
+}
+.pizza-cardapio{
+
+	width: 100%;
+	height: 8vh;
+
+}
+.pizza-cardapio p {
+	font-size: 30px;
+	color: white;
+	padding: 4px;
+	color: black;
+	border: 1px solid gray;
+	border-radius: 10px;
+	transition: transform 0.3s linear 0.1s;
+
+
+}
+.pizza-cardapio p:hover {
+	color: white;
+	background-color: #B2002A;
+	transition: 0.4s;
+	box-shadow: 3px 6px 5px gray;
+	transform: scale(1.01);
+
+
+}
+#pizza-icon-cardapio{
+	width: 20vh;
+}
+@media screen and (max-width: 800px) {
+
+  	.imagens-siameses{
+    	margin-top: 1vh;
+    	width: 44.9%;
+    	border-radius: 15%;
+    	padding:3px;
+    	height: 15vh;
+
+}
+.corpo{
+  width: 100%;
+  /* Talvez eu deixe grande */
+}
+.imagens-siameses{
+  height: 20vh;
+}
+div .navbar{
+    box-shadow: 0px 1.5px 5px rgb(0,0,0);
+}
+.promocoes{
+	width: 89%;
+	height: 100px;
+	background-color: black;
+	margin-left:3vh;
+	border-radius: 3%;
+	display: none;
+}
+#pizza-icon-cardapio{
+	width: 15vh;
+}
+
+	}
