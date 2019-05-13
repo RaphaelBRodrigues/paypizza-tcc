@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <?php
+$databaseHost = 'localhost';
+$databaseName = 'tcc';
+$databaseUsername = 'PayPizza';
+$databasePassword = 'paypizza';
+$mysqli = mysqli_connect($databaseHost,
+$databaseUsername,$databasePassword,$databaseName);
+
+
+
+
+?>
+
 	<title></title>
 	 <?php
 
@@ -22,6 +35,7 @@
 
                         
                     </form>
+                    <br>
                     <<?php  
                      $username = $_POST['username'];
                      $password = $_POST['password'];

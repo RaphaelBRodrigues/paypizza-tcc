@@ -91,38 +91,8 @@
 </html>
 <div id="php">
 <!-- PHP Cadastro/Index -->
-<?php
 
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-  $endereço = $_POST['endereço'];
-  $ncasa = $_POST['ncasa'];
-  $data = $_POST['data'];
-  $nome = $_POST['nome'];
-  $id = null;
-//$sql = "INSERT INTO cliente (ClienteID,Nome,Nascimento,Endereço,Senha,Usuario) VALUES (6, '$nome','$data','$endereço','$password','$username')";
-/*$sql = "INSERT INTO cliente (ClienteID,Nome,Nascimento,Endereço,Senha,Usuario) VALUES (6, 'ra','65','aasf','word','sername')";*/
-//mysqli_query($mysqli,$sql);
-//$result = mysqli_query($mysqli, "SELECT * FROM cliente");
-mysqli_query($mysqli,"INSERT into cliente values($id,'$nome','$data','$endereço','$password','$username');");
-                        
-
-  ?>
-  <!-- PHP Login/Index -->
-  <?php 
-   if($username == mysqli_query($mysqli,'SELECT Usuario FROM cliente')){
-   if($username == mysqli_query($mysqli,'SELECT Senha FROM cliente')){
-   	echo "Funcionou";
-   }else{
-   	echo "Nãoaooooooooooo";
-   }
-
-}
-   
-   ?>
-   ?>
   </div>
   <style>
-  	
+
   </style>
- 
