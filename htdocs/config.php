@@ -1,5 +1,5 @@
 <?php
-$databaseHost = 'localhost';
+$databaseHost = '10.101.148.151';
 $databaseName = 'tcc';
 $databaseUsername = 'PayPizza';
 $databasePassword = 'paypizza';
