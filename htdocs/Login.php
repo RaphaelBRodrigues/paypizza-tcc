@@ -47,6 +47,7 @@ session_start();//Iniciando sessão
 
                           if($username == $row['Usuario']){
                           if ($password == $row['Senha']) {
+				  $_SESSION['logado'] = true;
                            echo "Login Efetuado";
                          }
                        }
