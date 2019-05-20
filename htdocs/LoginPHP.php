@@ -15,7 +15,7 @@
         if($username == $row['Usuario']){
         if ($password == $row['Senha']) {
          echo "Login Efetuado";
-
+         echo "SESSION";
          $_SESSION['logado'] = true;
          $_SESSION['nome'] = $username;
 

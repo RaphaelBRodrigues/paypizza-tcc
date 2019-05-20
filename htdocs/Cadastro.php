@@ -48,7 +48,7 @@
             <div class="navbar-header">
 
 
-            <a href="index.html">  <img id="img_pizza_logo" src="https://cdn4.iconfinder.com/data/icons/food-and-drink-1-2/64/pizza-food-italian-meal-512.png"></a>
+            <a href="index.php">  <img id="img_pizza_logo" src="https://cdn4.iconfinder.com/data/icons/food-and-drink-1-2/64/pizza-food-italian-meal-512.png"></a>
                <a href="index.php">  <p id="nome_logo">PayPizza</p></a>
 
 
