@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <?php
-session_start();//Iniciando sessão
-?>
+ <?php
+ session_start();
+if($_SESSION['logado'] == true){
+  echo "LOGADO";
+}
+                    include_once('config.php');
+
+                    ?>
 
 	<title></title>
 	 <?php
@@ -27,39 +32,9 @@ session_start();//Iniciando sessão
 
                     </form>
                     <br>
-                    <<?php
-                     $username = $_POST['username'];
-                     $password = $_POST['password'];
-                     if(isset($password) || isset($username) ){
-                       $password = "";
-                       $username = "";
-                       echo "Campo em branco";
-
-
-                     }
-                    //Consulta
-
-                        $dados = mysqli_query($mysqli,'SELECT * FROM cliente');
-
-                        while ($row = $dados->fetch_assoc()) {
-
-                       echo "<br>";
-
-                          if($username == $row['Usuario']){
-                          if ($password == $row['Senha']) {
-				  $_SESSION['logado'] = true;
-                           echo "Login Efetuado";
-                         }
-                       }
-
-                         if(($username != $row['Usuario']) || ($username != $row['Senha'])){
-                           echo "Credenciais Inválidas";
-                         }
-                        }
-
-
-
-                        ?>
+                  <?php
+include_once('LoginPHP.php');
+                   ?>
 </body>
 </html>
 

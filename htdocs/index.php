@@ -3,6 +3,7 @@
 
                     include_once('config.php');
                     session_start();
+
                     ?>
 <head>
     <meta charset="utf-8">
@@ -92,8 +93,19 @@
 </html>
 <div id="php">
 <!-- PHP Cadastro/Index -->
+<?php
+
+if($_SESSION['logado'] == true){
+  echo "LOGADO";
+}else{
+  $_SESSION['logado'] = false;
+  $_SESSION['nome'] = "Desconectado";
+  echo "<a href='Login.php'>$username</a>";
+
+}
+
+
+ ?>
+
 
   </div>
-  <style>
-
-  </style>

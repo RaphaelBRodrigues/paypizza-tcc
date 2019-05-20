@@ -1,21 +1,10 @@
 <html>
 <head>
-<?php
-$databaseHost = '10.101.148.151';
-$databaseName = 'tcc';
-$databaseUsername = 'PayPizza';
-$databasePassword = 'paypizza';
-$con = mysqli_connect($databaseHost,
-$databaseUsername,$databasePassword,$databaseName);
-
-
-
-
-?>
 
  <?php
 
                     include_once('config.php');
+
                     ?>
     <meta charset="utf-8">
     <meta http-equiv=”content-type” content="text/html;" />
@@ -333,46 +322,7 @@ div .navbar{
 </style>
 
 <h99>
-
 <?php
-
-$user = $_GET['username'];
-$pass = $_GET['password'];
-$end = $_GET['endereço'];
-$nca = $_GET['ncasa'];
-$data = $_GET['data'];
-$nome = $_GET['nome'];
-$cpf = $_GET['cpf'];
-$id = null;/*
-echo "$user <br>";
-echo "$pass <br>";
-echo "$end <br>";
-echo "$nca<br>" ;
-echo "$data<br>";
-echo "$nome<br>";
-
-echo "$id<br>";
-*/
-
-
-
-/*mysqli_query($mysqli,"INSERT INTO Cliente VALUES('669', 'asfas', '2010-02-26', 'axaf', 'fasf', 'fasfsa', '6', '42');");*/
-
-//mysqli_query($con,"INSERT INTO `Cliente`(ClienteID, Nome, Nascimento, Endereço, Senha, Usuario, Ncasa, cpf)
-                            //              VALUES(null,'$nome','$data','$end','$pass','$user','$nca','$cpf')");
-mysqli_query($con,"INSERT INTO `Cliente`(ClienteID,Nome,Nascimento,Endereco,Senha,Usuario,Ncasa,cpf) VALUES(null,'$nome','$data','$end','$pass','$user','$nca','$cpf')");
-
-
-//mysqli_query($con,"INSERT INTO Cliente VALUES('9','$nome')");
-
-/*mysqli_query($mysqli,"INSERT INTO Cliente VALUES(99,"$_GET['nome']",$_GET['data'],'$_GET['endereço']','$_GET['password']','$_GET['username']','$_GET['ncasa']','$_GET['cpf']')");
-*/
-
-
-/*if (mysql_query($mysqli,"INSERT INTO cliente VALUES(3,'Rap','2001-05-11','ende','56as','user','ns','sad')" )) {
-  echo "<h1>Cadastro Completo</h1>";
-
-}*/
-
-?>
+include_once('CadastroPHP.php')
+ ?>
 </h99>
