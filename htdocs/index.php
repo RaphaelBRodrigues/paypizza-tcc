@@ -93,7 +93,7 @@ session_start();
         <!-- PHP Cadastro/Index -->
         <?php
 
-        if($_SESSION['logado'] = true){
+     /*   if($_SESSION['logado'] = true){
           echo "LOGADO";
 
        }
@@ -103,7 +103,13 @@ session_start();
           echo "TESTE";
           echo "<a href='Login.php'>$username</a>";
 
-        }
+        }*/
+		if($_SESSION['logado'] == true)
+{echo "Usúario logado";
+}
+else{
+  echo '<a href = "Login.php">Você está desconectado,FAÇA O LOGIN</a>';
+}
 
 
          ?>
