@@ -110,13 +110,13 @@ session_start();
 else{
   echo '<a href = "Login.php">Você está desconectado,FAÇA O LOGIN</a>';
 }*/
-		
-if(isset($_SESSION['log'])){
+	//Verificação do login	
+if(isset($_SESSION['logado'])){
   echo "";
 }else{
   echo '<a href = "Login.php">Você está desconectado,FAÇA O LOGIN</a>';
 }
-if($_SESSION['log'] == true)
+if($_SESSION['logado'] == true)
 {echo "Usuário logado";
 }
 
