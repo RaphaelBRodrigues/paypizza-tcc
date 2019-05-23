@@ -1,6 +1,5 @@
 <html>
 <?php
-session_start();
 
                     include_once('config.php');
 
@@ -92,6 +91,8 @@ session_start();
         <div id="php">
         <!-- PHP Cadastro/Index -->
         <?php
+        session_start();
+        echo $_SESSION['nome'];
 
      /*   if($_SESSION['logado'] = true){
           echo "LOGADO";
@@ -110,14 +111,17 @@ session_start();
 else{
   echo '<a href = "Login.php">Você está desconectado,FAÇA O LOGIN</a>';
 }*/
-	//Verificação do login	
+	//Verificação do login
 if(isset($_SESSION['logado'])){
-  echo "";
-}else{
+  echo "o";
+}
+else if($_SESSION['logado']==false){
   echo '<a href = "Login.php">Você está desconectado,FAÇA O LOGIN</a>';
 }
+
 if($_SESSION['logado'] == true)
-{echo "Usuário logado";
+{
+  echo "Usuário logado";
 }
 
 

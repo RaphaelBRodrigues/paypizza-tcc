@@ -1,20 +1,4 @@
-Skip to content
 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
-
-@WestBern
-0
-0 1 LucasMofardini/tcc
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-tcc/Login.html
-@LucasMofardini LucasMofardini Add files via upload
-d55bde1 just now
-146 lines (87 sloc)  5.84 KB
 
 <html>
 <head>
@@ -91,6 +75,7 @@ d55bde1 just now
 
 
                           <?php
+                          session_start();
                         $databaseHost = 'localhost';
                         $databaseName = 'tcc';
                         $databaseUsername = 'PayPizza';

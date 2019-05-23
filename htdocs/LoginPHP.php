@@ -14,18 +14,16 @@
 
         if($username == $row['Usuario']){
         if ($password == $row['Senha']) {
-         echo "Login Efetuado";
-         echo "SESSION";
+         echo "Login Efetuado</br>";
+         echo "SESSION</br>";
          $_SESSION['logado'] = true;
          $_SESSION['nome'] = $username;
 
        }
      }else{
-       echo "Credenciais inválidas";
-       $_SESSION['logado'] = false;
-       $_SESSION['nome'] = "Faça o login";
-     }
+       echo "Credenciais inválidas</br>";
 
+     }
     /* if($username != $row['Usuario']){
      if ($password != $row['Senha']) {
        echo "Credenciais Inválidas";
@@ -40,6 +38,9 @@
        ECHO "<br>";
 
       }
+      ECHO "USUARIO CONECTADO:".$_SESSION['nome'] ;
+      echo $_SESSION['logado'];
+;
 
 
 
