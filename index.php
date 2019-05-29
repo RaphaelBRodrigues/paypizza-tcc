@@ -1,7 +1,7 @@
 <html>
 <?php
 
-                    include_once('config.php');
+                    include_once('Controller/config.php');
 
                     ?>
 <head>
@@ -19,9 +19,9 @@
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="Views/estilo.css">
 	<link rel="icon"  href="https://image.flaticon.com/icons/png/512/99/99954.png">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="Views/estilo.css">
 
 
 
@@ -60,12 +60,13 @@
 							<ul class="nav navbar-nav navbar-right">
 
 
-								<li><a href="cardapio.html"> <p class="menu_cabeça"> Cardápio</p></a> </li>
+								<li><a href="Views/cardapio.html"> <p class="menu_cabeça"> Cardápio</p></a> </li>
 								<li><a href="#"> <p  class="menu_cabeça">Promoções</p></a></li>
 								<li><a href="#"> <p class="menu_cabeça">Quem Somos</p></a></li>
 
 
 								<li><a href="#" class="menu_cabeça"><i class="material-icons" style="color: white;">shopping_cart</i></a></li>
+                  <li><a href="Views/Login.php"> <p class="menu_cabeça pessoa"><i class="material-icons" style="color: white;">person</i></a></li>
 
 							</ul>
 						</nav>
@@ -112,18 +113,21 @@ else{
   echo '<a href = "Login.php">Você está desconectado,FAÇA O LOGIN</a>';
 }*/
 	//Verificação do login
-if(isset($_SESSION['logado'])){
-  echo "o";
-}
-else if($_SESSION['logado']==false){
-  echo '<a href = "Login.php">Você está desconectado,FAÇA O LOGIN</a>';
-}
+  if(isset($_SESSION['logado'])){
+    echo "";
+  }
+  else if($_SESSION['logado']==false){
+    echo '<a href = "Views/Login.php">Você está desconectado,FAÇA O LOGIN</a>';
+  }
 
-if($_SESSION['logado'] == true)
-{
-  echo "Usuário logado";
-}
-
+  if($_SESSION['logado'] == true)
+  {
+    echo "Usuário logado";
+    echo "
+    <form action='Controller/Logout.php'/>
+    <button type='submit' value='LOGOUT'>
+    </form>";
+  }
 
          ?>
 

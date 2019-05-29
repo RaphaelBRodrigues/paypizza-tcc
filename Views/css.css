@@ -1,0 +1,16 @@
+
+body{
+	background-color: black;
+    margin:0 auto;
+}
+form{
+    margin-left:33%;
+    text-align:center;
+    height:400px;
+    width:400px;
+}
+.input{
+    height:20px;
+    width:300px;
+    font-family:calibri;
+}

@@ -1,0 +1,57 @@
+.login{
+  border: 3px solid black;
+  margin-top: 15vh;
+  width:  90%;
+  height: 30vh;
+  background-color: #f0f8ff;
+  margin-left: 7vh;
+  }
+  h2{
+    text-align: center;
+  }
+  .input-icon{
+    margin-left: 40%;
+  }
+  .button-login{
+    margin-left: 7vh;
+  box-shadow: 3px 6px 5px black ;
+  
+  }
+  input{
+
+    background-color: rgba(0,0,0,0);
+    border: 2px solid black;
+    padding: 3px;
+    margin-left: 0.3vh;
+
+  }
+  #chato{
+      border: 2px solid black;
+      border-right: none;
+    box-shadow: 3px 3px 5px black ;
+      margin-left: -2.9vh;
+      position: absolute;
+  }
+  #cadastrar{
+    margin-left: 15vh;
+    margin-top: -3vh;
+  }
+  #f0f8ff
+
+@media screen and (max-width: 800px){
+  input{
+    margin-left: -10vh;
+  }
+  .login{
+    height: 40vh;
+
+    margin-left: 2.5vh;
+    border-radius:10px;
+  }
+  .button-login{
+    margin-left: 2vh;
+  }
+  #chato{
+    opacity: 0;
+  }
+}
