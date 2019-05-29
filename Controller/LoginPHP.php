@@ -44,7 +44,7 @@
       ECHO "<br>";ECHO "<br>";
       ECHO "USUARIO CONECTADO:".$_SESSION['nome'] ;
       echo $_SESSION['logado'];
-;
+
 
 
 
