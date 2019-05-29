@@ -122,7 +122,7 @@ else{
 
   if($_SESSION['logado'] == true)
   {
-    echo "Usuário logado";
+    echo "Bem vindo ".$_SESSION['username']."!!";
     echo "
     <form action='Controller/Logout.php'/>
     <button type='submit' value='LOGOUT'>
