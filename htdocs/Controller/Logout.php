@@ -21,6 +21,7 @@
 
 	<link rel="stylesheet" type="text/css" href="../Views/estilo.css">
 	<link rel="icon"  href="https://image.flaticon.com/icons/png/512/99/99954.png">
+
 	<link rel="stylesheet" type="text/css" href="../Views/estilo.css">
 
 
@@ -60,13 +61,13 @@
 							<ul class="nav navbar-nav navbar-right">
 
 
-								<li><a href="Views/cardapio.html"> <p class="menu_cabeça"> Cardápio</p></a> </li>
+								<li><a href="../Views/cardapio.html"> <p class="menu_cabeça"> Cardápio</p></a> </li>
 								<li><a href="#"> <p  class="menu_cabeça">Promoções</p></a></li>
 								<li><a href="#"> <p class="menu_cabeça">Quem Somos</p></a></li>
 
 
 								<li><a href="#" class="menu_cabeça"><i class="material-icons" style="color: white;">shopping_cart</i></a></li>
-                  <li><a href="Views/Login.php"> <p class="menu_cabeça pessoa"><i class="material-icons" style="color: white;">person</i></a></li>
+                  <li><a href="../Views/Login.php"> <p class="menu_cabeça pessoa"><i class="material-icons" style="color: white;">person</i></a></li>
 
 							</ul>
 						</nav>
@@ -90,6 +91,20 @@
 				</header>
 		    </div>
         <div id="php">
+
+          <?php
+          session_start();
+          if(session_destroy()){
+            echo "Logout efetuado com sucesso";
+
+          }else{
+
+            echo "Logout falhou";
+
+          }
+          session_destroy();
+
+          ?>
         <!-- PHP Cadastro/Index -->
         <?php
         session_start();
@@ -117,12 +132,12 @@ else{
     echo "";
   }
   else if($_SESSION['logado']==false){
-    echo '<a href = "Views/Login.php">Você está desconectado,FAÇA O LOGIN</a>';
+    echo '<a href = "../Views/Login.php">Você está desconectado,FAÇA O LOGIN</a>';
   }
 
   if($_SESSION['logado'] == true)
   {
-    echo "Usuário logado";
+    echo "Bem vindo ".$_SESSION['username']."!!";
     echo "
     <form action='Controller/Logout.php'/>
     <button type='submit' value='LOGOUT'>
@@ -137,18 +152,3 @@ else{
 </body>
 
 </html>
-
-<?php
-
-session_start();
-if(session_destroy()){
-  echo "Logout efetuado com sucesso";
-
-}else{
-
-  echo "Logout falhou";
-
-}
-session_destroy();
-
-?>
