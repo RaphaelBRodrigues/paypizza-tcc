@@ -11,12 +11,19 @@ Salario int(6),
 Endereço varchar(50),
 primary key(FuncionarioID)
 );
+
 create table Produto(
-ProdutoID int auto_increment,
-Nome varchar(20),
+ProdutoID int primary key not null,
+Nome varchar(30),
+Descricao varchar(200),
 Preco float(3,2),
-primary key(ProdutoID)
+Sabor varchar(20),
+Categoria int(3)
 );
+desc pizza;
+select * from pizza;
+insert into produto values('1','Pizza de Calabresa','Não sei','200.0','Calabresa','Pizza');
+
 create table Cliente(
 ClienteID int auto_increment,
 Nome varchar(40) not null,
@@ -53,3 +60,5 @@ select * from funcionario;
 show tables;
 desc Produto;
 insert into Produto values(null,'Pizza Calabresa',30.0);
+
+
