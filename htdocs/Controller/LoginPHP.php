@@ -1,6 +1,8 @@
  <?php
  session_start();
 
+ include_once('config.php');
+
    $username = $_POST['username'];
    $password = $_POST['password'];
 
@@ -30,6 +32,7 @@
     }
   }*/
 
+
        echo "User: ";
        echo $row['Usuario'];
        echo "<br>";
@@ -38,6 +41,7 @@
        ECHO "<br>";
 
       }
+      ECHO "<br>";ECHO "<br>";
       ECHO "USUARIO CONECTADO:".$_SESSION['nome'] ;
       echo $_SESSION['logado'];
 ;
