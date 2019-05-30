@@ -53,3 +53,4 @@ select * from funcionario;
 show tables;
 desc Produto;
 insert into Produto values(null,'Pizza Calabresa',30.0);
+alter table produto add column Categoria int(3);
