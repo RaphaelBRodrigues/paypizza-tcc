@@ -16,16 +16,16 @@ CategoriaID int primary key,
 Nomee varchar(30)
 );
 create table Produto(
-AlimentoID int primary key not null auto_increment,
+ProdutoID int primary key not null auto_increment,
 Nome varchar(30),
 CategoriaID int(3),
 Preco int(2),
 foreign key(CategoriaID) references  Categoria(CategoriaID)
 );
-INSERT INTO `crud`.`categoria` (`CategoriaID`, `Nomee`) VALUES ('1', 'Pizzas');
-INSERT INTO `crud`.`categoria` (`CategoriaID`, `Nomee`) VALUES ('2', 'Pizzas Doces');
-INSERT INTO `crud`.`categoria` (`CategoriaID`, `Nomee`) VALUES ('3', 'Bebidas');
-INSERT INTO `crud`.`categoria` (`CategoriaID`, `Nomee`) VALUES ('4', 'Outros');
+INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('1', 'Pizzas');
+INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('2', 'Pizzas Doces');
+INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('3', 'Bebidas');
+INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('4', 'Outros');
 
 
 
@@ -57,15 +57,16 @@ Descrição varchar(300)
 
 show tables;
 desc cliente;
-insert into Cliente values(null,'Raphael','2001-11-05','Augusto Franco');
+#insert into Cliente values(null,'Raphael','2001-11-05','Augusto Franco');
 
 
 show tables;
 desc Funcionario;
 insert into Funcionario values(null,"Lucas","2001-01-05",20000,"Franco");
-select * from funcionario;
+select * from produto;
 
 show tables;
 desc Produto;
-insert into Produto values(null,'Pizza Calabresa',30.0);
+#insert into Produto values(null,'Pizza Calabresa',30.0);
 alter table produto add column Categoria int(3);
+insert into produtos values();
