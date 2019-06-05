@@ -27,7 +27,7 @@ INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('2', 'Pizzas Doces');
 INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('3', 'Bebidas');
 INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('4', 'Outros');
 
-
+select * from categoria;
 
 
  
