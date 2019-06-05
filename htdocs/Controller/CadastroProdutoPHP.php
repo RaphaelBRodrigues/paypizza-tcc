@@ -28,15 +28,14 @@ $pre = $_GET['pre'];
 mysqli_query($mysqli,"INSERT INTO `produto` VALUES(null,'$nome','$cat','$pre')");
 
 
-$cons = mysqli_query($mysqli,"SELECT * from Produto
-inner join categoria where produto.CategoriaID = categoria.CategoriaID;");
+$cons = mysqli_query($mysqli,"SELECT * from categoria;");
 echo "
 
 <table class='table table-dark tinny'>
 <thead>
     <tr>
-      <th scope='col'>Nome</th>
       <th scope='col'>Categoria</th>
+      <th scope='col'>Nome</th>
 
     </tr>
   </thead>
@@ -46,7 +45,7 @@ echo "
         while ($imp = mysqli_fetch_array($cons)) {
           echo "<tr>";
           echo "<th scop='row'>" . $imp['CategoriaID'] . " </td>";
-          echo "<th scop='row'>" . $imp['Nome'] . " </td>";
+          echo "<th scop='row'>" . $imp['Nomee'] . " </td>";
           echo "</tr> <br>";
 
         }
