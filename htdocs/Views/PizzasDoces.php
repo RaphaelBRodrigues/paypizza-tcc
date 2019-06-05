@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 
 <?php
+$tipo = 2;
 include_once('../Controller/config.php');
 include_once('../Controller/PizzasDocesPHP.php');
 
-$tipo = 2;
+
 ?>
 <html lang="en" dir="ltr">
   <head>
