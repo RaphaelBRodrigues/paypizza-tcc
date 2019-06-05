@@ -33,7 +33,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
   <body>
@@ -63,7 +63,7 @@
               <ul class="nav navbar-nav navbar-right">
 
 
-                    <li><a href="cardapio.php"> <p class="menu_cabeça"> Cardápio </p></a></li>
+                    <li><a href="Views.php/cardapio.html"> <p class="menu_cabeça"> Cardápio </p></a></li>
                 <li><a href="#"> <p  class="menu_cabeça">Promoções</p></a></li>
                 <li><a href="#"> <p class="menu_cabeça">Quem Somos</p></a></li>
 
@@ -77,14 +77,18 @@
 
 
 
-                    <form method="get" action="Cadastro.php">
+                    <!-- <form method="get" action="Cadastro.php">
                     <h2>Cadastro</h2>
 
-                       <i class="material-icons">person</i>
-                          <input type="text" name="username" id="i1" class="input" placeholder="Nome de usuário"/><br><br>
+
+                        <input class="w3-input w3-animate-input" name="username" id="i1" type="text"placeholder="Nome de usuárior" style="width:30%"><br><br>
+
+
+
 
                            <i class="material-icons">vpn_key</i>
-                    <input type="password" name="password" id="i2" class="input" placeholder="Senha"/><Br><br>
+                             <input class="w3-input w3-animate-input" id="i2"class="input" name="username" id="i1" type="password"placeholder="Nome de usuárior" style="width:30%">
+                    <input  name="password" id="i2" class="input" placeholder="Senha"/><Br><br>
 
                           <i class="material-icons">home</i>
                     <input type="text" name="endereço" id="i3" class="input" placeholder="Endereço"/><br><br>
@@ -97,48 +101,134 @@
                     <input type="date" name="data" id="i5" class="input" placeholder="Data de nascimento"/><br><br>
                       <i class="material-icons">sentiment_very_satisfied</i>
                     <input type="text" name="nome" id="i6" class="input" placeholder="Nome Completo"/><br><br>
-                                        <input type="text" name="cpf" id="i8" class="input" placeholder="CPF"/><br><br>
+                                        <input type="text" name="cpf" id="i8" class="input" placeholder="CPF"/  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      title="Digite o CPF no formato nnn.nnn.nnn-nn"><br><br>
 
                     <input type="submit" id="i7" placeholder="Enviar"/>
-                    </form>
 
+
+
+                    </form> -->
+
+                    <form>
+
+                      <h1>Cadastro</h1><br><br>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationServer01">Nome de usuário</label> <br>
+             <span class="input-group-text" id="inputGroupPrepend3">Digite seu usuário</span>
+        <input class="w3-input w3-animate-input" required name="username" id="i1" type="text" style="width:40%">
+        <div class="valid-feedback">
+          Tudo certo!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationServer02">Senha</label> <br>
+          <span class="input-group-text" id="inputGroupPrepend3">Digite sua senha</span>
+      <input class="w3-input w3-animate-input" id="i2"class="input" name="username" id="i1" type="password" style="width:40%" required>
+        <div class="valid-feedback">
+          Tudo certo!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationServerUsername">Numero da casa </label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend3">ex: 45</span>
+          </div>
+            <input class="w3-input w3-animate-input" id="i2"class="input" name="username" id="i4" type="number" style="width:40%" required>
+          <div class="invalid-feedback">
+            Por favor, digite o numero da sua casa
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationServer03">Cidade</label> <br>
+        <span class="input-group-text" id="inputGroupPrepend3">ex: São Paulo</span>
+
+        <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Cidade" required>
+        <div class="invalid-feedback">
+          Por favor, informe uma cidade válida.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationServer04">Estado</label> <br>
+                <span class="input-group-text" id="inputGroupPrepend3">ex: Piracicaba</span>
+        <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Estado" required>
+        <div class="invalid-feedback">
+          Por favor, informe um estado válido.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationServer05">CEP</label><br>
+          <span class="input-group-text" id="inputGroupPrepend3">ex: 11111-000</span>
+        <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="CEP" required>
+        <div class="invalid-feedback">
+          Por favor, informe um CEP válido.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+        <label class="form-check-label" for="invalidCheck3">
+          Concordo com os termos e condições
+        </label>
+        <div class="invalid-feedback">
+          Você deve concordar, antes de continuar.
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </form>
 
 
 
 
         </div>
 
-      </div>
+
       <footer>
          Raphael Rodrigues & Lucas Mofardini
       </footer>
 </html>
 
 <style>
+
 footer{
   background-color: rgb(183,12,40);
   color: white;
   margin-bottom:0px;
   text-align: center;
 }
-
+@media screen and (max-width: 800px) {
+  footer{
+    display: none;
+  }
+}
+input{
+  text-align: center;
+}
 body{
     margin:0 auto;
 
 }
 form{
-    margin-left:33%;
+
     text-align:center;
     border:1px solid black;
-    height:400px;
-    width:400px;
+    height:500px;
+    width:1000px;
+
 }
 .input{
-    height:20px;
+    /* height:20px;
     width:300px;
     font-family:calibri;
     border-radius: 3px;
-      box-shadow: 0.5px 3px 2.5px black ;
+      box-shadow: 0.5px 3px 2.5px black ; */
 
 
 }
@@ -147,10 +237,15 @@ form{
 box-shadow: 3px 6px 5px black ;
 background-color:  #F0F8FF;
 }
-#i7{
-  box-shadow: 1px 3px 2.5px black ;
 
+h1{
+  background-color: #B2002A;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+  margin-top: 3px;
 
+  width: 100%;
 }
 i{
   position: absolute;
@@ -161,6 +256,7 @@ i{
 </style>
 <!-- Esse é o css do  menu -->
 <style>
+
   body{
   margin: 0;
   background-color: #FFFAFA;
@@ -170,6 +266,7 @@ i{
   width: 75%;
 
 }
+
 header{
   width: 100%;
   height: 1200px;
