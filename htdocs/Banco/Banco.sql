@@ -63,7 +63,7 @@ desc cliente;
 show tables;
 desc Funcionario;
 insert into Funcionario values(null,"Lucas","2001-01-05",20000,"Franco");
-select * from produto;
+select * from categoria;
 
 show tables;
 desc Produto;
