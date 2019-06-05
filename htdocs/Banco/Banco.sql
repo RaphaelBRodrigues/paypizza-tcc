@@ -11,12 +11,27 @@ Salario int(6),
 Endereço varchar(50),
 primary key(FuncionarioID)
 );
-create table Produto(
-ProdutoID int auto_increment,
-Nome varchar(20),
-Preco float(3,2),
-primary key(ProdutoID)
+create table Categoria(
+CategoriaID int primary key,
+Nomee varchar(30)
 );
+create table Produto(
+AlimentoID int primary key not null auto_increment,
+Nome varchar(30),
+CategoriaID int(3),
+Preco int(2),
+foreign key(CategoriaID) references  Categoria(CategoriaID)
+);
+INSERT INTO `crud`.`categoria` (`CategoriaID`, `Nomee`) VALUES ('1', 'Pizzas');
+INSERT INTO `crud`.`categoria` (`CategoriaID`, `Nomee`) VALUES ('2', 'Pizzas Doces');
+INSERT INTO `crud`.`categoria` (`CategoriaID`, `Nomee`) VALUES ('3', 'Bebidas');
+INSERT INTO `crud`.`categoria` (`CategoriaID`, `Nomee`) VALUES ('4', 'Outros');
+
+
+
+
+ 
+
 create table Cliente(
 ClienteID int auto_increment,
 Nome varchar(40) not null,
@@ -53,3 +68,4 @@ select * from funcionario;
 show tables;
 desc Produto;
 insert into Produto values(null,'Pizza Calabresa',30.0);
+alter table produto add column Categoria int(3);
