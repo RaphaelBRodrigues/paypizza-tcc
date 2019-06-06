@@ -63,7 +63,7 @@
               <ul class="nav navbar-nav navbar-right">
 
 
-                    <li><a href="Views.php/cardapio.html"> <p class="menu_cabeça"> Cardápio </p></a></li>
+                    <li><a href="cardapio.php"> <p class="menu_cabeça"> Cardápio </p></a></li>
                 <li><a href="#"> <p  class="menu_cabeça">Promoções</p></a></li>
                 <li><a href="#"> <p class="menu_cabeça">Quem Somos</p></a></li>
 
