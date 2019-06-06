@@ -35,8 +35,9 @@ select * from categoria;
 create table Cliente(
 ClienteID int auto_increment,
 Nome varchar(40) not null,
-Nascimento date,
-Endereço varchar(50),
+Bairro varchar(50),
+Rua varchar(50),
+Ncasa int(8),
 Senha text,
 Usuario text,
 primary key(ClienteID)
@@ -63,10 +64,10 @@ desc cliente;
 show tables;
 desc Funcionario;
 insert into Funcionario values(null,"Lucas","2001-01-05",20000,"Franco");
-select * from categoria;
+select * from cliente;
 
 show tables;
 desc Produto;
 #insert into Produto values(null,'Pizza Calabresa',30.0);
 alter table produto add column Categoria int(3);
-insert into produtos values();
+insert into produto values();

@@ -109,7 +109,7 @@
 
 
                     </form> -->
-
+<br>
                     <form>
 
                       <h1>Cadastro</h1><br><br>
@@ -125,7 +125,7 @@
       <div class="col-md-4 mb-3">
         <label for="validationServer02">Senha</label> <br>
           <span class="input-group-text" id="inputGroupPrepend3">Digite sua senha</span>
-      <input class="w3-input w3-animate-input" id="i2"class="input" name="username" id="i1" type="password" style="width:40%" required>
+      <input class="w3-input w3-animate-input" id="i2"class="input" name="password" id="i1" type="password" style="width:40%" required>
         <div class="valid-feedback">
           Tudo certo!
         </div>
@@ -136,7 +136,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroupPrepend3">ex: 45</span>
           </div>
-            <input class="w3-input w3-animate-input" id="i2"class="input" name="username" id="i4" type="number" style="width:40%" required>
+            <input class="w3-input w3-animate-input" id="i2"class="input" name="ncasa" id="i4" type="number" style="width:40%" required>
           <div class="invalid-feedback">
             Por favor, digite o numero da sua casa
           </div>
@@ -145,18 +145,18 @@
     </div>
     <div class="form-row">
       <div class="col-md-6 mb-3">
-        <label for="validationServer03">Cidade</label> <br>
+        <label for="validationServer03">Bairro</label> <br>
         <span class="input-group-text" id="inputGroupPrepend3">ex: São Paulo</span>
 
-        <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Cidade" required>
+        <input type="text" class="form-control is-invalid" id="validationServer03"  name="bairro" placeholder="Bairro" required>
         <div class="invalid-feedback">
           Por favor, informe uma cidade válida.
         </div>
       </div>
       <div class="col-md-3 mb-3">
-        <label for="validationServer04">Estado</label> <br>
+        <label for="validationServer04">Rua</label> <br>
                 <span class="input-group-text" id="inputGroupPrepend3">ex: Piracicaba</span>
-        <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Estado" required>
+        <input type="text" class="form-control is-invalid" id="validationServer04"  name="rua" placeholder="Rua" required>
         <div class="invalid-feedback">
           Por favor, informe um estado válido.
         </div>
@@ -164,7 +164,7 @@
       <div class="col-md-3 mb-3">
         <label for="validationServer05">CEP</label><br>
           <span class="input-group-text" id="inputGroupPrepend3">ex: 11111-000</span>
-        <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="CEP" required>
+        <input type="text" class="form-control is-invalid" id="validationServer05"  name="cep" placeholder="CEP" required>
         <div class="invalid-feedback">
           Por favor, informe um CEP válido.
         </div>

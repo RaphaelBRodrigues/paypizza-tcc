@@ -6,7 +6,9 @@ include_once('config.php');
 
 $user = $_GET['username'];
 $pass = $_GET['password'];
-$end = $_GET['endereço'];
+$end = $_GET['bairro'];
+$end2 = $_GET['rua'];
+
 $nca = $_GET['ncasa'];
 $data = $_GET['data'];
 $nome = $_GET['nome'];
@@ -28,11 +30,12 @@ echo "$id<br>";
 
 //mysqli_query($con,"INSERT INTO `Cliente`(ClienteID, Nome, Nascimento, Endere�o, Senha, Usuario, Ncasa, cpf)
                             //              VALUES(null,'$nome','$data','$end','$pass','$user','$nca','$cpf')");
-mysqli_query($con,"INSERT INTO `Cliente`(ClienteID,Nome,Nascimento,Endereco,Senha,Usuario,Ncasa,cpf)
-VALUES(null,'$nome','$data','$end','$pass','$user','$nca','$cpf')");
+mysqli_query($con,"INSERT INTO `tcc`.`cliente` (`ClienteID`, `Nome`, `Bairro`, `Rua`, `Ncasa`, `Senha`, `Usuario`) 
+	                                     VALUES (null, '$user', '$end ', '$end2', '$nca', '$pass', '%user')");/*
+if(){
 $_SESSION['logado'] = true;
 $_SESSION['nome'] = $username;
-
+}*/
 //mysqli_query($con,"INSERT INTO Cliente VALUES('9','$nome')");
 
 /*mysqli_query($mysqli,"INSERT INTO Cliente VALUES(99,"$_GET['nome']",$_GET['data'],'$_GET['endere�o']','$_GET['password']','$_GET['username']','$_GET['ncasa']','$_GET['cpf']')");
