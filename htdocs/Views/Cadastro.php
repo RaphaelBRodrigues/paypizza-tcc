@@ -110,7 +110,7 @@
 
                     </form> -->
 <br>
-                    <form>
+                    <form method="post">
 
                       <h1>Cadastro</h1><br><br>
     <div class="form-row">
