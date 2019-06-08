@@ -17,7 +17,7 @@ Nomee varchar(30)
 );
 create table Produto(
 ProdutoID int primary key not null auto_increment,
-Nome varchar(30),
+Nome varchar(30) unique,
 CategoriaID int(3),
 Preco int(2),
 foreign key(CategoriaID) references  Categoria(CategoriaID)
