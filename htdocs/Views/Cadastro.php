@@ -420,6 +420,7 @@ div .navbar{
 
 <h99>
 <?php
-include_once('../Controller/CadastroPHP.php')
+include_once('../Controller/CadastroPHP.php');
+
  ?>
 </h99>

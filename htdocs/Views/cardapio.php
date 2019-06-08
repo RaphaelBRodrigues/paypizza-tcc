@@ -69,10 +69,10 @@
         <div class="cardapio-corpo">
 
             <div class="pizza-cardapio">
-                <p> <a href="Pizzas.php"> <img id="pizza-icon-cardapio" src="http://www.pizzarianovabelem.com.br/images/home-dest-pizza.png" alt="pizza">Pizzas</a> <?php echo "<a href='../Controller/CadastroProdutoPHP.php?id=1'>Cadastrar novo item</a>" ; ?></p>
-                <p> <a href="PizzasDoces.php">  <img id="pizza-icon-cardapio" src="https://culinaria.culturamix.com/blog/wp-content/gallery/pizza-2/Ap-Pizzas-Cardapio-2.png" alt="Pizza Doces">Pizzas Doces <?php echo "<a href='../Controller/CadastroProdutoPHP.php?id=2'>Cadastrar novo item</a>" ; ?></a></p>
-                <p>  <a href="Bebidas.php"> <img id="pizza-icon-cardapio" src="https://distribuidorahideal.com.br/527-large_default/refri-coca-cola-350ml-c-12.jpg" alt="Bebidas">Bebidas</a> <?php echo "<a href='../Controller/CadastroProdutoPHP.php?id=3'>Cadastrar novo item</a>" ; ?></p>
-                    <p>  <a href="Outros.php"> <img id="pizza-icon-cardapio" src="http://www.saboresabor.com.br/wp-content/uploads/2017/11/prato_coxinha.png" alt="Outros">Outros</a> <?php echo "<a href='../Controller/CadastroProdutoPHP.php?id=4'>Cadastrar novo item</a>" ; ?></p>
+                <p> <a href="Pizzas.php"> <img id="pizza-icon-cardapio" src="http://www.pizzarianovabelem.com.br/images/home-dest-pizza.png" alt="pizza">Pizzas</a> <?php  echo "<a href='CadastroProduto.php?id=1'>Cadastrar novo item</a>" ; ?></p>
+                <p> <a href="PizzasDoces.php">  <img id="pizza-icon-cardapio" src="https://culinaria.culturamix.com/blog/wp-content/gallery/pizza-2/Ap-Pizzas-Cardapio-2.png" alt="Pizza Doces">Pizzas Doces <?php echo "<a href='CadastroProduto.php?id=2'>Cadastrar novo item</a>" ; ?></a></p>
+                <p>  <a href="Bebidas.php"> <img id="pizza-icon-cardapio" src="https://distribuidorahideal.com.br/527-large_default/refri-coca-cola-350ml-c-12.jpg" alt="Bebidas">Bebidas</a> <?php echo "<a href='CadastroProduto.php?id=3'>Cadastrar novo item</a>" ; ?></p>
+                    <p>  <a href="Outros.php"> <img id="pizza-icon-cardapio" src="http://www.saboresabor.com.br/wp-content/uploads/2017/11/prato_coxinha.png" alt="Outros">Outros</a> <?php echo "<a href='CadastroProduto.php?id=4'>Cadastrar novo item</a>" ; ?></p>
 
             </div>
 
