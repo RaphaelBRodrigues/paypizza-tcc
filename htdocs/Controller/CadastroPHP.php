@@ -4,15 +4,15 @@ session_start();
 
 include_once('config.php');
 
-$user = $_GET['username'];
-$pass = $_GET['password'];
-$end = $_GET['bairro'];
-$end2 = $_GET['rua'];
+$user = $_POST['username'];
+$pass = $_POST['password'];
+$end = $_POST['bairro'];
+$end2 = $_POST['rua'];
 
-$nca = $_GET['ncasa'];
-$data = $_GET['data'];
-$nome = $_GET['nome'];
-$cpf = $_GET['cpf'];
+$nca = $_POST['ncasa'];
+$data = $_POST['data'];
+$nome = $_POST['nome'];
+$cpf = $_POST['cpf'];
 $id = null;/*
 echo "$user <br>";
 echo "$pass <br>";
@@ -50,7 +50,7 @@ $_SESSION['nome'] = $username;
 }*/
 //mysqli_query($con,"INSERT INTO Cliente VALUES('9','$nome')");
 
-/*mysqli_query($mysqli,"INSERT INTO Cliente VALUES(99,"$_GET['nome']",$_GET['data'],'$_GET['endere�o']','$_GET['password']','$_GET['username']','$_GET['ncasa']','$_GET['cpf']')");
+/*mysqli_query($mysqli,"INSERT INTO Cliente VALUES(99,"$_POST['nome']",$_POST['data'],'$_POST['endere�o']','$_POST['password']','$_POST['username']','$_POST['ncasa']','$_POST['cpf']')");
 */
 
 
