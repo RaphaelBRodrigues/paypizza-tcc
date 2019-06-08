@@ -1,4 +1,5 @@
 <?php
+include_once('config.php');
 
 
 $cons2 = mysqli_query($mysqli,"SELECT * from produto where CategoriaID = $tipo");

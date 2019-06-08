@@ -1,29 +1,19 @@
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<!-- 
-<form method="get" id="f1" action="CadastroProdutoPHP.php">
-      <b>Cadastre o Produto</b>
-      <br>
-    <input type="text"  name="nome" placeholder="Nome">
-    <input type="text" name="cat" placeholder="Categoria">
-    <input type="text" name="pre" placeholder="Preço">
-    <input type="submit" name=""class='btn btn-dark' placeholder="enviar">
-    </form> -->
-    
 <?php
 include_once('config.php');
+
+//Cadastrp
 $nome = $_GET['nome'];
-
-$cat = $_GET['cat'];
 $pre = $_GET['pre'];
+$tipo = $_GET['id'];
+$catt = $_GET['cat'];
+
+mysqli_query($mysqli,"INSERT INTO `Produto` VALUES(null,'$nome',$catt,'$pre',$catt)");
 
 
-mysqli_query($mysqli,"INSERT INTO `produto` VALUES(null,'$nome','$cat','$pre',$tipo)");
+//Tabela Categoria
 
-
-$cons = mysqli_query($mysqli,"SELECT * from categoria;");
-echo "
+$cons = mysqli_query($mysqli,"SELECT Nomee from Categoria where CategoriaID=$tipo;");
+/*echo "
 
 <table class='table table-dark tinny'>
 <thead>
@@ -37,22 +27,28 @@ echo "
   <tbody>
 ";
         while ($imp = mysqli_fetch_array($cons)) {
-          echo "<tr>";
+
           echo "<th scop='row'>" . $imp['CategoriaID'] . " </td>";
           echo "<th scop='row'>" . $imp['Nomee'] . " </td>";
           echo "</tr> <br>";
 
-        }
-        echo "</tbody>";
-
-        echo "</table>";
-
-        echo "<br>";				echo "<br>";
-        echo "<br>";
-
-$cons2 = mysqli_query($mysqli,"SELECT * from categoria");
+        }*/
 
 
+$cons2 = mysqli_query($mysqli,"SELECT * from Categoria");
+
+if(mysqli_query($mysqli,"INSERT INTO `Produto` VALUES(null,'$nome',$catt,'$pre',$catt)")){
+echo "
+Produto Cadastrado com sucesso!
+
+";
+}else{
+  if(isset($nome) || isset($cat))
+  echo "
+  Falha no  Cadastrado do produto!
+
+  ";
+}
 
 
  ?>
