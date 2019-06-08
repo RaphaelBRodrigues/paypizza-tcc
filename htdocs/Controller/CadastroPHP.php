@@ -30,8 +30,20 @@ echo "$id<br>";
 
 //mysqli_query($con,"INSERT INTO `Cliente`(ClienteID, Nome, Nascimento, Endere�o, Senha, Usuario, Ncasa, cpf)
                             //              VALUES(null,'$nome','$data','$end','$pass','$user','$nca','$cpf')");
-mysqli_query($con,"INSERT INTO `Cliente` (`ClienteID`, `Nome`, `Bairro`, `Rua`, `Ncasa`, `Senha`, `Usuario`) 
-	                                     VALUES (null, '$user', '$end ', '$end2', '$nca', '$pass', '$user')");/*
+														if(isset($user) || isset($end) || isset($end2) || isset($nca) || isset($pass) || isset($user)){
+	if(mysqli_query($con,"INSERT INTO `Cliente` (`ClienteID`, `Nome`, `Bairro`, `Rua`, `Ncasa`, `Senha`, `Usuario`)
+															                                     VALUES (null, '$user', '$end ', '$end2', '$nca', '$pass', '$user')")){
+mysqli_query($con,"INSERT INTO `Cliente` (`ClienteID`, `Nome`, `Bairro`, `Rua`, `Ncasa`, `Senha`, `Usuario`)
+	                                     VALUES (null, '$user', '$end ', '$end2', '$nca', '$pass', '$user')");
+
+echo "Cadastro realizado com sucesso";
+}}else{
+
+	echo "Cadastro falhou";
+
+}
+
+																			 /*
 if(){
 $_SESSION['logado'] = true;
 $_SESSION['nome'] = $username;
