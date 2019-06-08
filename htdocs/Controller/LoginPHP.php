@@ -14,8 +14,11 @@
 
      echo "<br>";
 
+if(empty($username) || empty($username) ){
+session_destroy();
+}
         if($username == $row['Usuario']){
-        if ($password == $row['Senha']) {
+        if ($username == $row['Senha']) {
          echo "Login Efetuado</br>";
          echo "SESSION</br>";
          $_SESSION['logado'] = true;
