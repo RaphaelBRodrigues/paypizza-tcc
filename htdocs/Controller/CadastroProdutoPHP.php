@@ -6,9 +6,9 @@ $nome = $_GET['nome'];
 $pre = $_GET['pre'];
 $tipo = $_GET['id'];
 $catt = $_GET['cat'];
-
+if(isset($nome)||isset($pre)||isset($catt)){
 mysqli_query($mysqli,"INSERT INTO `Produto` VALUES(null,'$nome',$catt,'$pre',$catt)");
-
+}
 
 //Tabela Categoria
 
@@ -48,7 +48,9 @@ Produto Cadastrado com sucesso!
   Falha no  Cadastrado do produto!
 
   ";
+
 }
+mysqli_query($mysqli,"DELETE FROM `Produto` WHERE Nome=' ' or Nome='' ");
 
 
  ?>
