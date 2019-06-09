@@ -9,7 +9,6 @@
   //Consulta
 
       $dados = mysqli_query($con,'SELECT * FROM `Cliente`');
-/*eu quero jogaaaaaaaaaaaaaaaaaaaaaaaa*/
       while ($row = $dados->fetch_assoc()) {
 
      echo "<br>";
