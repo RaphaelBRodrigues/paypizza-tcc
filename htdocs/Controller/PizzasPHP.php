@@ -10,7 +10,13 @@ $cons2 = mysqli_query($mysqli,"SELECT * from Produto where CategoriaID = $tipo")
           echo "<tr>";
           echo "<td>Nome:" . $imp2['Nome'] . " </td><br>";
           echo "<td>Preço:" . $imp2['Preco'] . " </td><br><br><br>";
+          echo "
+          <form class='' action='../Controller/DeletarPHP.php' method='get'>
+            <button type='submit' value=".$imp2['ProdutoID']." name='apagar'>Deletar</button>
+          </form>";
           echo "</tr> <br>";
+
+
 
         }
 ?>
