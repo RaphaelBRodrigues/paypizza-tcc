@@ -2,7 +2,6 @@
 
 <?php
 $tipo = 3;
-include_once('../Controller/CadastroProdutoPHP.php');
 
 include_once('../Controller/config.php');
 include_once('../Controller/BebidasPHP.php');

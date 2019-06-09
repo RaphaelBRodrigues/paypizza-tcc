@@ -4,7 +4,6 @@
 $tipo = 2;
 include_once('../Controller/config.php');
 include_once('../Controller/PizzasDocesPHP.php');
-include_once('../Controller/CadastroProdutoPHP.php');
 
 
 ?>
