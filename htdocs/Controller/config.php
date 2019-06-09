@@ -21,3 +21,12 @@ $con = $mysqli;
 
 
 ?>
+<!--
+Paypizza.epizy.com
+HOST:ftpupload.net
+USERNAME:epiz_23520784
+https://github.com/RaphaelBRodrigues/PayPizza-TCC/tree/master/htdocs
+https://github.com/RaphaelBRodrigues/
+https://github.com/lucasmofardini/
+
+ -->
