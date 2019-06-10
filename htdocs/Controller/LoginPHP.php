@@ -5,26 +5,29 @@
 
    $username = $_POST['username'];
    $password = $_POST['password'];
+if(empty($username) || empty($password) ){
+echo "Preencha os campos <br><br>";
+}
 
   //Consulta
 
       $dados = mysqli_query($con,'SELECT * FROM `Cliente`');
+             echo "Lista de usuarios";
+        echo "<br>";
+
       while ($row = $dados->fetch_assoc()) {
 
      echo "<br>";
 
-if(empty($username) || empty($username) ){
-session_destroy();
-}
+
         if($username == $row['Usuario']){
-        if ($username == $row['Senha']) {
-         echo "Login Efetuado</br>";
-         echo "SESSION</br>";
+        if ($password == $row['Senha']) {
+     
          $_SESSION['logado'] = true;
          $_SESSION['nome'] = $username;
 
        }
-     }else{
+     }else if((isset($username) || isset($password)) && ($_SESSION['logado'] == false)){
        echo "Credenciais inválidas</br>";
 
      }
@@ -34,20 +37,20 @@ session_destroy();
     }
   }*/
 
-
-       echo "User: ";
+       echo $row['ClienteID'];
+echo "-";
        echo $row['Usuario'];
        echo "<br>";
-       echo "Pass: ";
-       echo $row['Senha'];
-       ECHO "<br>";
+      
 
       }
       ECHO "<br>";ECHO "<br>";
-      ECHO "USUARIO CONECTADO:".$_SESSION['nome'] ;
-      echo $_SESSION['logado'];
 
+if( $_SESSION['logado'] == true){
+    echo "LOGIN EFETUADO COM SUCESSO,BEM VINDO ".$_SESSION['nome'];
+}
 
+mysqli_query($mysqli,"DELETE from Cliente where Senha = '';");
 
 
       ?>
