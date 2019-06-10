@@ -1,7 +1,7 @@
 <?php
 
 include_once('config.php');
-
+session_start();
 $cons2 = mysqli_query($mysqli,"SELECT * from Produto where CategoriaID = $tipo");
           echo "<br>";
 
@@ -14,14 +14,15 @@ $cons2 = mysqli_query($mysqli,"SELECT * from Produto where CategoriaID = $tipo")
           <form class='' action='../Controller/DeletarPHP.php' method='get'>
             <button type='submit' value=".$imp2['ProdutoID']." name='apagar'>Deletar</button>
           </form>";
+          echo"
+          <form class='' action='#' method='get'>
+            <button type='submit' value=".$imp2['ProdutoID']." name='comprar'>Adicionar ao carrinho</button>
+          </form>";
           echo "</tr> <br><br><br>";
-                    
-                    
 
 
 
         }
-
         $click = $_GET['comprar'];
         $ClienteID = $_SESSION['ClienteID'];
 if(isset($click)){
