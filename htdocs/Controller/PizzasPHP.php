@@ -15,8 +15,29 @@ $cons2 = mysqli_query($mysqli,"SELECT * from Produto where CategoriaID = $tipo")
             <button type='submit' value=".$imp2['ProdutoID']." name='apagar'>Deletar</button>
           </form>";
           echo "</tr> <br><br><br>";
+                    
+                    
 
 
 
         }
+
+        $click = $_GET['comprar'];
+        $ClienteID = $_SESSION['ClienteID'];
+if(isset($click)){
+  mysqli_query($mysqli,"INSERT INTO compra VALUES(null,$click,$ClienteID)");
+}
+      $pedido = array();
+
+      array_push($pedido, $click);
+      $_SESSION['compra'] = $pedido;
+//print_r($array);
+       //echo $array[0];
+
+//$_SESSION[$array[0]] = $pedido ;
+$i = 0;
+while($i<10){
+  $_SESSION[$pedido[0]];
+$i = $i+1;
+}
 ?>
