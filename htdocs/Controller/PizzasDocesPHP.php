@@ -22,24 +22,27 @@ $cons2 = mysqli_query($mysqli,"SELECT * from Produto where CategoriaID = $tipo")
 
 
         }
+
         $click = $_GET['comprar'];
         $ClienteID = $_SESSION['ClienteID'];
-if(isset($click)){
-  mysqli_query($mysqli,"INSERT INTO compra VALUES(null,$click,$ClienteID)");
-}
-      $pedido = array();
 
-      array_push($pedido, $click);
-      $_SESSION['compra'] = $pedido;
-//print_r($array);
-       //echo $array[0];
+        $dados = mysqli_query($con,"SELECT * from compra inner join Produto
+  /*inner join cliente*/ where ClienteID = $ClienteID ;");
 
-//$_SESSION[$array[0]] = $pedido ;
-$i = 0;
-while($i<10){
-  $_SESSION[$pedido[0]];
-$i = $i+1;
-}
+        while ($row = $dados->fetch_assoc()) {
+          ECHO "ClienteID:". $row['ClienteID'];
+          echo "<br><br>";
+  }
+
+
+  if(isset($click)){
+  if (mysqli_query($mysqli,
+  "INSERT INTO `compra` (`CompraID`, `ProdutoID`, `ClienteID`) VALUES (null, '$click', '$ClienteID');")) {
+  Echo "Compra realizada com sucesso";
+  }
+  mysqli_query($mysqli,
+  "INSERT INTO `compra` (`CompraID`, `ProdutoID`, `ClienteID`) VALUES (null, '$click', '$ClienteID');");
+  }
 /*
 $cons2 = mysqli_query($mysqli,"SELECT * from produto where CategoriaID = $tipo");
           echo "<br>";

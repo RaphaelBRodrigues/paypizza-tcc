@@ -27,9 +27,7 @@ if($_SESSION['logado'] == false){
 
          $_SESSION['logado'] = true;
          $_SESSION['nome'] = $username;
-         $_SESSION['ClienteID'] =  $row['ClienteID'];
-
-
+$_SESSION['ClienteID'] =  $row['ClienteID'];
        }
      }else if((isset($username) || isset($password)) && ($_SESSION['logado'] == false)){
        echo "Credenciais inválidas</br>";
