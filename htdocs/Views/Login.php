@@ -97,10 +97,10 @@
                                             <div class="input-icon">
 
                                                    <i class="material-icons "  id="chato">person</i>
-                                                      <input type="text" name="username" id="i1" class="input" placeholder="Nome de usuário"/><br><br>
+                                                      <input type="text" name="username" id="i1" class="input" required placeholder="Nome de usuário"/><br><br>
 
                                                        <i class="material-icons" id="chato">vpn_key</i>
-                                                <input type="password" required name="password" id="i2" class="input" placeholder="Senha"/><Br><br>
+                                                <input type="password" required name="password" id="i2" class="input" required placeholder="Senha"/><Br><br>
                                                                     <input type="submit" id="i3" placeholder="Enviar" class="button-login"/>
                                                                                     <p id="cadastrar"><a href="Cadastro.php">cadastrar</a></p>
 
