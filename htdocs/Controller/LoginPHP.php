@@ -12,7 +12,9 @@ echo "Preencha os campos <br><br>";
   //Consulta
 
       $dados = mysqli_query($con,'SELECT * FROM `Cliente`');
+if($_SESSION['logado'] == false){
              echo "Lista de usuarios";
+           }
         echo "<br>";
 
       while ($row = $dados->fetch_assoc()) {
@@ -22,7 +24,7 @@ echo "Preencha os campos <br><br>";
 
         if($username == $row['Usuario']){
         if ($password == $row['Senha']) {
-     
+
          $_SESSION['logado'] = true;
          $_SESSION['nome'] = $username;
 
@@ -36,12 +38,13 @@ echo "Preencha os campos <br><br>";
        echo "Credenciais Inválidas";
     }
   }*/
+  if($_SESSION['logado'] == false){
 
        echo $row['ClienteID'];
 echo "-";
        echo $row['Usuario'];
        echo "<br>";
-      
+     }
 
       }
       ECHO "<br>";ECHO "<br>";
