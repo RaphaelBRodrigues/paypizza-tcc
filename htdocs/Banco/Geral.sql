@@ -42,12 +42,14 @@ Senha text,
 Usuario text,
 primary key(ClienteID)
 );
-create table Compra(
-Total float(4,2) default 0,
+
+create table compra(
+CompraID int primary key auto_increment,
 ProdutoID int,
 ClienteID int,
-foreign key(ProdutoID) references Produto(ProdutoID),
-foreign key(ClienteID) references Cliente(ClienteID)
+foreign key(ClienteID) references Cliente(ClienteID),
+foreign key(ProdutoID) references Produto(ProdutoID)
+
 );
 
 create table Estoque(
