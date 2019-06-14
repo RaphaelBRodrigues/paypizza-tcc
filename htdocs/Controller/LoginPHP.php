@@ -24,7 +24,7 @@ if($_SESSION['logado'] == false){
 
         if($username == $row['Usuario']){
         if ($password == $row['Senha']) {
-
+ $_SESSION['SessaoID'] = rand();
          $_SESSION['logado'] = true;
          $_SESSION['nome'] = $username;
          $_SESSION['Nivel'] = 1;
@@ -55,6 +55,7 @@ echo "-";
 
 if( $_SESSION['logado'] == true){
     echo "LOGIN EFETUADO COM SUCESSO,BEM VINDO ".$_SESSION['nome'];
+    echo "<br> ID da sessão:".$_SESSION['SessaoID'];
 }
 
 mysqli_query($mysqli,"DELETE from Cliente where Senha = '';");

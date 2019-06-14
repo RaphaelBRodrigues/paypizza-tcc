@@ -8,10 +8,10 @@ $tipo = $_GET['id'];
 $img = $_GET['img'];
 echo $img;
 $catt = $_GET['cat'];
-if(mysqli_query($mysqli,"INSERT INTO `produto` (`ProdutoID`, `Nome`, `CategoriaID`, `Preco`, `imagem`, `Categoria`) VALUES
- (null,'$nome',$catt,'$pre','$img',$catt)")){
-mysqli_query($mysqli,"INSERT INTO `produto` (`ProdutoID`, `Nome`, `CategoriaID`, `Preco`, `imagem`, `Categoria`) VALUES
- (null,'$nome',$catt,'$pre','$img',$catt)");
+if(mysqli_query($mysqli,"INSERT INTO `produto` (`ProdutoID`, `Nome`, `CategoriaID`, `Preco`, `imagem`) VALUES
+ (null,'$nome',$catt,'$pre','$img')")){
+mysqli_query($mysqli,"INSERT INTO `produto` (`ProdutoID`, `Nome`, `CategoriaID`, `Preco`, `imagem`) VALUES
+ (null,'$nome',$catt,'$pre','$img')");
 echo "
 Produto Cadastrado com sucesso!
 <a href='../Views/Cardapio.php'>Voltar para o cardápio</a>
