@@ -11,9 +11,9 @@ echo "Preencha os campos <br><br>";
 
   //Consulta
 
-      $dados = mysqli_query($con,'SELECT * FROM `Cliente`');
+      $dados = mysqli_query($con,'SELECT * FROM `Funcionario`');
 if($_SESSION['logado'] == false){
-             echo "Lista de usuarios";
+             echo "Lista de Funcionarios";
            }
         echo "<br>";
 
@@ -26,15 +26,13 @@ if($_SESSION['logado'] == false){
         if ($password == $row['Senha']) {
 
          $_SESSION['logado'] = true;
-         $_SESSION['nome'] = $username;
-         $_SESSION['Nivel'] = 1;
+         $_SESSION['Nivel'] = $row['Nivel'];
 
-$_SESSION['ClienteID'] =  $row['ClienteID'];
+         $_SESSION['nome'] = $username;
+$_SESSION['FuncionarioID'] =  $row['FuncionarioID'];
        }
      }else if((isset($username) || isset($password)) && ($_SESSION['logado'] == false)){
        echo "Credenciais inválidas</br>";
-       $_SESSION['nivel'] = 0;
-
 
      }
     /* if($username != $row['Usuario']){
@@ -44,7 +42,7 @@ $_SESSION['ClienteID'] =  $row['ClienteID'];
   }*/
   if($_SESSION['logado'] == false){
 
-       echo $row['ClienteID'];
+       echo $row['FuncionarioID'];
 echo "-";
        echo $row['Usuario'];
        echo "<br>";
@@ -54,7 +52,9 @@ echo "-";
       ECHO "<br>";ECHO "<br>";
 
 if( $_SESSION['logado'] == true){
+echo $_SESSION['Nivel'];
     echo "LOGIN EFETUADO COM SUCESSO,BEM VINDO ".$_SESSION['nome'];
+
 }
 
 mysqli_query($mysqli,"DELETE from Cliente where Senha = '';");

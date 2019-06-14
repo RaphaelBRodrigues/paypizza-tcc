@@ -27,5 +27,7 @@ include_once('../Controller/CadastroProdutoPHP.php');
 
      echo $imp['Nomee'];}?>">
    <input type="text" name="pre" placeholder="Preço">
+      <input type="text" name="img" placeholder="Link da imagem">
+
    <button type="submit" name="cat" value = "<?php echo "$tipo" ?>" class='btn btn-dark' placeholder="enviar">Cadastrar</button>
    </form>

@@ -34,7 +34,7 @@ echo "$id<br>";
 	if(mysqli_query($con,"INSERT INTO `Cliente` (`ClienteID`, `Nome`, `Bairro`, `Rua`, `Ncasa`, `Senha`, `Usuario`)
 															                                     VALUES (null, '$user', '$end ', '$end2', '$nca', '$pass', '$user')")){
 mysqli_query($con,"INSERT INTO `Cliente` (`ClienteID`, `Nome`, `Bairro`, `Rua`, `Ncasa`, `Senha`, `Usuario`)
-	                                     VALUES (null, '$user', '$end ', '$end2', '$nca', '$pass', '$user')");
+	                                     VALUES (null, '$user', '$end ', '$end2', '$nca',  ( SELECT PASSWORD('$pass') ), '$user')");
 
 echo "Cadastro realizado com sucesso";
 }}else{

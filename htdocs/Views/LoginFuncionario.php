@@ -92,7 +92,7 @@
                           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
-                          <form method="post" action="Login.php" class="login">
+                          <form method="post" action="../Controller/LoginFuncionarioPHP.php" class="login">
                                             <h2>Login</h2>
                                             <div class="input-icon">
 
@@ -113,7 +113,7 @@
                                             <br>
 
                                             <<?php
-                                             include_once('../Controller/LoginPHP.php');
+                                             include_once('../Controller/LoginFuncionarioPHP.php');
 
                                                 ?>
                       </section>

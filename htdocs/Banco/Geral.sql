@@ -5,29 +5,35 @@ create database TCC;
 use TCC;
 create table Funcionario(
 FuncionarioID int auto_increment,
+Nivel int not null,
 Nome varchar(40) not null,
 Nascimento date,
 Salario int(6),
 Endereço varchar(50),
+Senha text,
+Usuario text,
 primary key(FuncionarioID)
 );
 create table Categoria(
 CategoriaID int primary key,
 Nomee varchar(30)
 );
+#drop table produto;
 create table Produto(
 ProdutoID int primary key not null auto_increment,
 Nome varchar(30) unique,
 CategoriaID int(3),
 Preco int(2),
+imagem text,
+
 foreign key(CategoriaID) references  Categoria(CategoriaID)
 );
 INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('1', 'Pizzas');
 INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('2', 'Pizzas Doces');
 INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('3', 'Bebidas');
 INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('4', 'Outros');
+INSERT INTO `funcionario` (`FuncionarioID`, `Nivel`, `Nome`, `Nascimento`, `Salario`, `Endereço`, `Senha`, `Usuario`) VALUES ('1', '4', 'PayPizza', '01012019', '0', 'UNASP', '123', 'paypizza');
 
-select * from categoria;
 
 
  
@@ -63,8 +69,6 @@ desc cliente;
 
 show tables;
 desc Funcionario;
-insert into Funcionario values(null,"Lucas","2001-01-05",20000,"Franco");
-select * from cliente;
 
 show tables;
 desc Produto;
@@ -73,5 +77,4 @@ alter table produto add column Categoria int(3);
 insert into produto values();
 use tcc;
 show tables;
-select * from produto;
 

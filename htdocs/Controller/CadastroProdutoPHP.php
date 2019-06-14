@@ -5,9 +5,13 @@ include_once('config.php');
 $nome = $_GET['nome'];
 $pre = $_GET['pre'];
 $tipo = $_GET['id'];
+$img = $_GET['img'];
+echo $img;
 $catt = $_GET['cat'];
-if(mysqli_query($mysqli,"INSERT INTO `Produto` VALUES(null,'$nome',$catt,'$pre',$catt)")){
-mysqli_query($mysqli,"INSERT INTO `Produto` VALUES(null,'$nome',$catt,'$pre',$catt)");
+if(mysqli_query($mysqli,"INSERT INTO `produto` (`ProdutoID`, `Nome`, `CategoriaID`, `Preco`, `imagem`, `Categoria`) VALUES
+ (null,'$nome',$catt,'$pre','$img',$catt)")){
+mysqli_query($mysqli,"INSERT INTO `produto` (`ProdutoID`, `Nome`, `CategoriaID`, `Preco`, `imagem`, `Categoria`) VALUES
+ (null,'$nome',$catt,'$pre','$img',$catt)");
 echo "
 Produto Cadastrado com sucesso!
 <a href='../Views/Cardapio.php'>Voltar para o cardápio</a>
