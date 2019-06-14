@@ -65,7 +65,7 @@ ClienteID int,
 foreign key(ProdutoID) references Produto(ProdutoID),
 foreign key(ClienteID) references Cliente(ClienteID)
 );
-select * from carrinho inner join Produto where Carrinho.ProdutoID = Carrinho.ProdutoID;
+select * from carrinho inner join Produto where Carrinho.ProdutoID = Produto.ProdutoID;
 create table Estoque(
 NomeProduto varchar(30),
 Quantidade int,
