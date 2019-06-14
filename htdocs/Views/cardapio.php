@@ -60,7 +60,7 @@
 								<li><a href="#"> <p class="menu_cabeça">Quem Somos</p></a></li>
 
 
-								<li><a href="#" class="menu_cabeça"><i class="material-icons" style="color: white;">shopping_cart</i></a></li>
+								<li><a href="Carrinho.php" class="menu_cabeça"><i class="material-icons" style="color: white;">shopping_cart</i></a></li>
 
 							</ul>
 						</nav>
