@@ -47,7 +47,7 @@ Ncasa int(8),
 Senha text,
 Usuario text,
 primary key(ClienteID)
-);
+);/*
 create table Compra(
 Total float(4,2) default 0,
 ProdutoID int,
@@ -55,7 +55,17 @@ ClienteID int,
 foreign key(ProdutoID) references Produto(ProdutoID),
 foreign key(ClienteID) references Cliente(ClienteID)
 );
+*/
 
+#drop table carrinho;
+create table Carrinho(
+Sessao int,
+ProdutoID int,
+ClienteID int,
+foreign key(ProdutoID) references Produto(ProdutoID),
+foreign key(ClienteID) references Cliente(ClienteID)
+);
+select * from carrinho inner join Produto where Carrinho.ProdutoID = Carrinho.ProdutoID;
 create table Estoque(
 NomeProduto varchar(30),
 Quantidade int,
