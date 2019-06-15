@@ -1,8 +1,8 @@
 /*
 drop database tcc;
 */
-create database TCC;
-use TCC;
+#create database TCC;
+#use TCC;
 create table Funcionario(
 FuncionarioID int auto_increment,
 Nivel int not null,
@@ -74,18 +74,16 @@ Descrição varchar(300)
 );
 
 show tables;
-desc cliente;
 #insert into Cliente values(null,'Raphael','2001-11-05','Augusto Franco');
 
 
 show tables;
-desc Funcionario;
+
 
 show tables;
-desc Produto;
 #insert into Produto values(null,'Pizza Calabresa',30.0);
 alter table produto add column Categoria int(3);
 insert into produto values();
-use tcc;
 show tables;
-
+#delete from compra;
+select * from Compra inner join Cliente where Compra.ClienteID = Cliente.ClienteID;
