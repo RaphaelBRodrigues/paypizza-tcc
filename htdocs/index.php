@@ -91,43 +91,8 @@
 		    </div>
         <div id="php">
         <!-- PHP Cadastro/Index -->
-        <?php
-        session_start();
-        echo $_SESSION['nome'];
-
-     /*   if($_SESSION['logado'] = true){
-          echo "LOGADO";
-
-       }
-        else{
-          $_SESSION['logado'] = false;
-          $_SESSION['nome'] = "Desconectado";
-          echo "TESTE";
-          echo "<a href='Login.php'>$username</a>";
-
-        }
-		if($_SESSION['logado'] == true)
-{echo "Usúario logado";
-}
-else{
-  echo '<a href = "Login.php">Você está desconectado,FAÇA O LOGIN</a>';
-}*/
-	//Verificação do login
-  if(isset($_SESSION['logado'])){
-    echo "";
-  }
-  else if($_SESSION['logado']==false){
-    echo '<a href = "Views/Login.php">Você está desconectado,FAÇA O LOGIN</a>';
-  }
-
-  if($_SESSION['logado'] == true)
-  {
-    echo "Bem vindo ".$_SESSION['username']."!!";
-    echo "
-    <form action='Controller/Logout.php'/>
-    <button type='submit' value='LOGOUT'>
-    </form>";
-  }
+ <?php
+                     include_once('Controller/IndexPHP.php');
 
          ?>
 
