@@ -33,12 +33,12 @@ $Sessao = $_SESSION['SessaoID'];
         $dados = mysqli_query($con,"SELECT * from Carrinho inner join Produto
 /*inner join cliente*/ where ClienteID = $ClienteID ;");
 
-        while ($row = $dados->fetch_assoc()) {
+        #while ($row = $dados->fetch_assoc()) {
           ECHO "ClienteID:". $row['ClienteID'];
                     ECHO "SessãoID:".$_SESSION['SessaoID'];
 
           echo "<br><br>";
-}
+#}
 
 
 if(isset($click)){
