@@ -1,6 +1,7 @@
 
 <?php
 include('config.php');
+        include_once('UndefinedDeslogadoPHP.php');
 
     $PAR = $_GET['apagar'];
     if(isset($PAR)){

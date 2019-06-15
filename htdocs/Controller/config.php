@@ -1,5 +1,10 @@
 <?php
 //LOCAL
+session_start();
+if($_SESSION['logado'] == false){
+
+        include_once('UndefinedDeslogadoPHP.php');
+    }
 
 $databaseHost = 'localhost';
 $databaseName = 'tcc';

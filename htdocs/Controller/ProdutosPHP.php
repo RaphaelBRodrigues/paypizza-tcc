@@ -2,8 +2,11 @@
 
 include_once('config.php');
 session_start();
+
+
 $nivel = $_SESSION['Nivel'];
 $cons2 = mysqli_query($mysqli,"SELECT * from Produto where CategoriaID = $tipo");
+
           echo "<br>";
 
           while ($imp2 = mysqli_fetch_array($cons2)) {
@@ -27,6 +30,8 @@ $cons2 = mysqli_query($mysqli,"SELECT * from Produto where CategoriaID = $tipo")
 
 
         }
+
+
         $click = $_GET['Carrinho'];//Produto
         $ClienteID = $_SESSION['ClienteID'];//Cliente
 $Sessao = $_SESSION['SessaoID'];
@@ -34,8 +39,8 @@ $Sessao = $_SESSION['SessaoID'];
 /*inner join cliente*/ where ClienteID = $ClienteID ;");
 
         #while ($row = $dados->fetch_assoc()) {
-          ECHO "ClienteID:". $row['ClienteID'];
-                    ECHO "SessãoID:".$_SESSION['SessaoID'];
+        //  ECHO "ClienteID:". $row['ClienteID'];
+          //          ECHO "SessãoID:".$_SESSION['SessaoID'];
 
           echo "<br><br>";
 #}
@@ -53,6 +58,7 @@ Echo "Carrinho realizada com sucesso";
 
       array_push($pedido, $click);
       $_SESSION['Carrinho'] = $pedido;
+}
 //print_r($array);
        //echo $array[0];
 
@@ -62,4 +68,5 @@ while($i<10){
   $_SESSION[$pedido[0]];
 $i = $i+1;
 }*/
+
 ?>

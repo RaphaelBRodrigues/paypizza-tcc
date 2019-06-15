@@ -3,6 +3,8 @@
 session_start();
 
 include_once('config.php');
+
+
 /*if($_SESSION['logado'] == true){
   echo "FOI <br>".$_SESSION['nome']  ;
   echo $_SESSION['nome'] ;

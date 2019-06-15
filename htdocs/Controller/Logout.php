@@ -93,6 +93,7 @@
         <div id="php">
 
           <?php
+          include_once('config.php');
           session_start();
           if(session_destroy()){
             echo "Logout efetuado com sucesso";
@@ -108,7 +109,6 @@
         <!-- PHP Cadastro/Index -->
         <?php
         session_start();
-        echo $_SESSION['nome'];
 
      /*   if($_SESSION['logado'] = true){
           echo "LOGADO";

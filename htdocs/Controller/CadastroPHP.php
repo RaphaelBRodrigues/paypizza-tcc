@@ -3,12 +3,22 @@
 session_start();
 
 include_once('config.php');
+//Undefined error
+if(empty($_POST['termos'])){
+$_POST['username'] = " ";
+$_POST['password'] = " ";
+$_POST['bairro'] = " ";
+$_POST['cpf'] = " ";
+$_POST['rua'] = " ";
+$_POST['ncasa'] = " ";
+$_POST['data'] = " ";
+$_POST['nome'] = " ";
 
+}
 $user = $_POST['username'];
 $pass = $_POST['password'];
 $end = $_POST['bairro'];
 $end2 = $_POST['rua'];
-
 $nca = $_POST['ncasa'];
 $data = $_POST['data'];
 $nome = $_POST['nome'];
@@ -22,15 +32,17 @@ echo "$data<br>";
 echo "$nome<br>";
 
 echo "$id<br>";
+
+
 */
-
-
 
 /*mysqli_query($mysqli,"INSERT INTO Cliente VALUES('669', 'asfas', '2010-02-26', 'axaf', 'fasf', 'fasfsa', '6', '42');");*/
 
 //mysqli_query($con,"INSERT INTO `Cliente`(ClienteID, Nome, Nascimento, Endere�o, Senha, Usuario, Ncasa, cpf)
                             //              VALUES(null,'$nome','$data','$end','$pass','$user','$nca','$cpf')");
-														if(isset($user) || isset($end) || isset($end2) || isset($nca) || isset($pass) || isset($user)){
+if(isset($_POST['termos'])){
+	if($_POST['termos'] == 1){
+			if(isset($user) || isset($end) || isset($end2) || isset($nca) || isset($pass) || isset($user)){
 	if(mysqli_query($con,"INSERT INTO `Cliente` (`ClienteID`, `Nome`, `Bairro`, `Rua`, `Ncasa`, `Senha`, `Usuario`)
 															                                     VALUES (null, '$user', '$end ', '$end2', '$nca', '$pass', '$user')")){
 mysqli_query($con,"INSERT INTO `Cliente` (`ClienteID`, `Nome`, `Bairro`, `Rua`, `Ncasa`, `Senha`, `Usuario`)
@@ -42,6 +54,9 @@ echo "Cadastro realizado com sucesso";
 	echo "Cadastro falhou";
 
 }
+	}
+}
+													
 
 																			 /*
 if(){
