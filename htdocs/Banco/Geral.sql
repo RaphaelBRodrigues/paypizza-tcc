@@ -28,27 +28,19 @@ imagem text,
 
 foreign key(CategoriaID) references  Categoria(CategoriaID)
 );
-INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('1', 'Pizzas');
-INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('2', 'Pizzas Doces');
-INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('3', 'Bebidas');
-INSERT INTO `categoria` (`CategoriaID`, `Nomee`) VALUES ('4', 'Outros');
-INSERT INTO `funcionario` (`FuncionarioID`, `Nivel`, `Nome`, `Nascimento`, `Salario`, `Endereço`, `Senha`, `Usuario`) VALUES ('1', '4', 'PayPizza', '01012019', '0', 'UNASP', '123', 'paypizza');
 
-
-
- 
 
 create table Cliente(
 ClienteID int auto_increment,
-Nome varchar(40) not null,
-Bairro varchar(50),
-Rua varchar(50),
-Ncasa int(8),
-Senha text,
-Usuario text,
+Nome varchar(40) not null unique,
+Bairro varchar(50) not null,
+Rua varchar(50) not null,
+Ncasa int(8) not null,
+Senha text not null,
+Usuario text not null,
 primary key(ClienteID)
 );
-
+select * from cliente;
 
 #drop table compra;
 create table Carrinho(
@@ -58,10 +50,9 @@ ClienteID int,
 foreign key(ProdutoID) references Produto(ProdutoID),
 foreign key(ClienteID) references Cliente(ClienteID)
 );
-
 create table Compra(
 CompraID int primary key auto_increment,
-Sessao int,
+Sessao int unique,
 Total int,
 ClienteID int,
 foreign key(ClienteID) references Cliente(ClienteID)
@@ -73,17 +64,16 @@ Quantidade int,
 Descrição varchar(300)
 );
 
-show tables;
-#insert into Cliente values(null,'Raphael','2001-11-05','Augusto Franco');
 
 
-show tables;
 
+#select * from Compra inner join Cliente where Compra.ClienteID = Cliente.ClienteID;
 
-show tables;
-#insert into Produto values(null,'Pizza Calabresa',30.0);
-alter table produto add column Categoria int(3);
-insert into produto values();
-show tables;
-#delete from compra;
-select * from Compra inner join Cliente where Compra.ClienteID = Cliente.ClienteID;
+/*Categoria de Produtos pré determinada*/
+INSERT INTO `Categoria` (`CategoriaID`, `Nomee`) VALUES ('1', 'Pizzas');
+INSERT INTO `Categoria` (`CategoriaID`, `Nomee`) VALUES ('2', 'Pizzas Doces');
+INSERT INTO `Categoria` (`CategoriaID`, `Nomee`) VALUES ('3', 'Bebidas');
+INSERT INTO `Categoria` (`CategoriaID`, `Nomee`) VALUES ('4', 'Outros');
+/*Conta Master*/
+INSERT INTO `Funcionario` (`FuncionarioID`, `Nivel`, `Nome`, `Nascimento`, `Salario`, `Endereço`, `Senha`, `Usuario`) VALUES ('1', '4', 'PayPizza', '01012019', '0', 'UNASP', '123', 'paypizza');
+
