@@ -11,7 +11,11 @@
   </head>
   <body>
      <?php
+    if($_SESSION['logado'] == true){
     include_once('../Controller/CarrinhoPHP.php');
+}else{
+  echo "<p><a href='Login.php'>Efetue o login</a></p>";
+}
 
     ?>
   </body>

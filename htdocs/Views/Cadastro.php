@@ -172,7 +172,7 @@
     </div>
     <div class="form-group">
       <div class="form-check">
-        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+        <input class="form-check-input is-invalid" type="checkbox" value="1" name="termos" id="invalidCheck3" required>
         <label class="form-check-label" for="invalidCheck3">
           Concordo com os termos e condições
         </label>
