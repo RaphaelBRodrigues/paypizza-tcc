@@ -1,6 +1,9 @@
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+<script type="text/javascript" src="Js/cep.js">
+</script>
  <?php
 
                     include_once('../Controller/config.php');
@@ -145,8 +148,8 @@
     </div>
     <div class="form-row">
       <div class="col-md-6 mb-3">
-        <label for="validationServer03">Bairro</label> <br>
-        <span class="input-group-text" id="inputGroupPrepend3">ex: São Paulo</span>
+        <label id='bairro' for="validationServer03">Bairro</label> <br>
+        <span class="input-group-text" id="inputGroupPrepend3">ex: Capão redondo</span>
 
         <input type="text" class="form-control is-invalid" id="validationServer03"  name="bairro" placeholder="Bairro" required>
         <div class="invalid-feedback">
@@ -156,7 +159,7 @@
       <div class="col-md-3 mb-3">
         <label for="validationServer04">Rua</label> <br>
                 <span class="input-group-text" id="inputGroupPrepend3">ex: Piracicaba</span>
-        <input type="text" class="form-control is-invalid" id="validationServer04"  name="rua" placeholder="Rua" required>
+        <input type="text" class="form-control is-invalid" id="validationServer04"  name="rua" id='logradouro' placeholder="Rua" required>
         <div class="invalid-feedback">
           Por favor, informe um estado válido.
         </div>
@@ -164,7 +167,7 @@
       <div class="col-md-3 mb-3">
         <label for="validationServer05">CEP</label><br>
           <span class="input-group-text" id="inputGroupPrepend3">ex: 11111-000</span>
-        <input type="text" class="form-control is-invalid" id="validationServer05"  name="cep" placeholder="CEP" required>
+        <input type="text" class="form-control is-invalid" id="validationServer05" id='cep' name="cep" placeholder="CEP" required>
         <div class="invalid-feedback">
           Por favor, informe um CEP válido.
         </div>
