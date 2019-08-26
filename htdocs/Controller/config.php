@@ -15,14 +15,14 @@ $databaseUsername,$databasePassword,$databaseName);
 
 
 //EPIZY
-/*
-$databaseHost = 'sql203.epizy.com';
-$databaseName = 'epiz_23520784_PayPizza';
-$databaseUsername = 'epiz_23520784';
-$databasePassword = 'paypizza2019';
-$mysqli = mysqli_connect($databaseHost,
-$databaseUsername,$databasePassword,$databaseName);
-*/
+//
+// $databaseHost = 'sql203.epizy.com';
+// $databaseName = 'epiz_23520784_PayPizza';
+// $databaseUsername = 'epiz_23520784';
+// $databasePassword = 'paypizza2019';
+// $mysqli = mysqli_connect($databaseHost,
+// $databaseUsername,$databasePassword,$databaseName);
+
 
 $con = $mysqli;
 
