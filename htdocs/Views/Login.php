@@ -1,5 +1,4 @@
 
-
 <html>
 <head>
     <meta charset="utf-8">
@@ -102,7 +101,7 @@
                                                        <i class="material-icons" id="chato">vpn_key</i>
                                                 <input type="password" required name="password" id="i2" class="input" required placeholder="Senha"/><Br><br>
                                                                     <input type="submit" id="i3" placeholder="Enviar" class="button-login"/>
-                                                                                    <p id="cadastrar"><a href="Cadastro.php">cadastrar</a></p>
+                                                                <p id="cadastrar"><a href="Cadastro.php">cadastrar</a></p>
 
                                             </div>
 

@@ -1,7 +1,6 @@
-!<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+
     <?php
+    include_once('../Views/cabecalho.php');
     session_start();
     include_once('../Controller/config.php');
 
