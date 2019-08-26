@@ -3,14 +3,14 @@
 include_once('config.php');
 session_start();
 
-$o = 0;
+$o = 1;
 if (empty($fl)) {
   $fl = 'left';
 }
 $nivel = $_SESSION['Nivel'];
 $cons2 = mysqli_query($mysqli,"SELECT * from Produto where CategoriaID = $tipo");
-
-          echo "<br>   <center>";
+//Arrumar float
+          echo "<br> <br>  <center>";
 
           while ($imp2 = mysqli_fetch_array($cons2)) {
             $o = $o+1;
@@ -19,7 +19,8 @@ $cons2 = mysqli_query($mysqli,"SELECT * from Produto where CategoriaID = $tipo")
           }else{
             $fl = "right";
           }
-          echo "<tr><div style='float-".$fl.";'>";
+        //  echo $fl;
+          echo "<div style='float-".$fl.";'><tr>";
                     echo "<img  class='img-padrao' src=". $imp2['imagem'] ."><br>";
 
           echo "
