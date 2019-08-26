@@ -61,8 +61,8 @@
 
 
 								<li><a href="Views/cardapio.php"> <p class="menu_cabeça"> Cardápio</p></a> </li>
-								<li><a href="#"> <p  class="menu_cabeça">Promoções</p></a></li>
-								<li><a href="#"> <p class="menu_cabeça">Quem Somos</p></a></li>
+								<li><a href="Views/promocao.php"> <p  class="menu_cabeça">Promoções</p></a></li>
+								<li><a href="Views/quem.php"> <p class="menu_cabeça">Quem Somos</p></a></li>
 
 
 								<li><a href="#" class="menu_cabeça"><i class="material-icons" style="color: white;">shopping_cart</i></a></li>
@@ -75,7 +75,7 @@
 				<header>
 					<div class="imagens-side-menu">
 						<div class="text-center">
-								<img class="imagem-pizza" src="https://5pizzas.com.br/wp-content/uploads/2018/08/cropped-Pizza-Marguerita-Especial.jpg" class="img-fluid" alt="Imagem responsiva">
+								<img class="imagem-pizza" src="http://cdn.delivoro.com.br/f/public/arquivos/6e0218da0/img/prato/23938.jpg" class="img-fluid" alt="Imagem responsiva">
 						</div>
 					</div>
 					<div class="imagens-side-menu">
