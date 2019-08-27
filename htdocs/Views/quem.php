@@ -15,10 +15,10 @@ include_once('../Controller/config.php');
       <div class="div-raphael">
         <center>
 
-        <h2 id="nome-raphael">Raphael Barbosa Rodrigues</h2>
+        <h2 class="nome-raphael">Raphael Barbosa Rodrigues</h2>
 
       </center>
-        <img id="img-raphael" class="fotos-criadores col-7" src="https://avatars3.githubusercontent.com/u/42044496?s=400&v=4" alt="Raphael">
+        <img class="img-raphael" class="fotos-criadores col-7" src="https://avatars3.githubusercontent.com/u/42044496?s=400&v=4" alt="Raphael">
 
 				<center>
 
@@ -33,11 +33,11 @@ include_once('../Controller/config.php');
 				</div>
 			<div class="div-raphael">
 				<center>
-
-				<h2 id="nome-raphael">Lucas Gabriel M. de Almeida</h2>
+				
+				<h2 class="nome-raphael">Lucas Gabriel M. de Almeida</h2>
 
 			</center>
-				<img id="img-raphael" class="fotos-criadores "width="400px" src="https://pbs.twimg.com/profile_images/618982505388056576/8-ZCX5pc_400x400.jpg" alt="Raphael">
+				<img class="img-raphael" class="fotos-criadores "width="400px" src="https://pbs.twimg.com/profile_images/618982505388056576/8-ZCX5pc_400x400.jpg" alt="Raphael">
 
 				<center>
 
@@ -98,16 +98,16 @@ img{
 .arrumar{
 	margin-top: 35em;
 }
-#img-raphael{
+.img-raphael{
   float:right;
 	transition: transform 0.3s linear 0.1s;
 
 }
-#img-raphael:hover{
+.img-raphael:hover{
 	transform: scale(1.02);
 	transition: 0.6s;
 }
-#nome-raphael{
+.nome-raphael{
   float:left;
   position: relative;
 	margin-left: 2.5em;
@@ -134,7 +134,7 @@ img{
 	position: relative;
 	margin-top: 12em;
 }
-#nome-lucas{
+.nome-lucas{
 	float:right;
 	position: relative;
 	margin-left:12em;
@@ -148,6 +148,14 @@ img{
 @media screen and (max-width: 800px){
 	.titulo{
 width: 100%;
+	}
+	.img-raphael{
+		width: 100%;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	h2{
+
 	}
 }
 </style>
