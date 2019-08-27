@@ -58,9 +58,9 @@ $Sessao = $_SESSION['SessaoID'];
 #}
 
 
-if(isset($click)){
+if(!empty($click)){
 if (mysqli_query($mysqli,
-"INSERT INTO `Carrinho` ( `ProdutoID`, `ClienteID`) VALUES ($Sessao, '$click', '$ClienteID');")) {
+"INSERT INTO `Carrinho` ('Sessao',`ProdutoID`, `ClienteID`) VALUES ($Sessao, '$click', '$ClienteID');")) {
 Echo "Carrinho realizada com sucesso";
 }
   mysqli_query($mysqli,
