@@ -1,15 +1,19 @@
 <script src="jquery-3.4.1.min.js"></script>
-
+<!--
 <script type="text/javascript">
+
 function rel(){
  var dt = new Date();
  var hora = dt.getHours() +":"+ dt.getMinutes() +":"+ dt.getSeconds();
- $("#horas").text("Horário do pedido:"+hora);
- document.getElementByID("horas").innerHTML = "Horário do pedido:"+hora;
+ // $("#ho").text("Horário do pedido:"+hora);
+
+document.getElementById("horas").innerHTML = hora;
+
+
 }
 window.addEventListener("load",rel);
 
-</script>
+</script> -->
 <?php
 include_once('config.php');
 
@@ -32,11 +36,12 @@ $row = mysqli_fetch_array($dados);
 
 
 
-	mysqli_query($con,"INSERT INTO Compra(CompraID, Sessao, Total, ClienteID) VALUES(null,$Sessao,$total,$Cliente)");
+$hor = $_GET['horario'];
+	mysqli_query($con,"INSERT INTO Compra(CompraID, Sessao, Total, ClienteID,horario) VALUES(null,$Sessao,$total,$Cliente,'$hor'");
 	echo "Compra efetuada com sucesso
 
 	<ul>
-	<li >Horário do pedido:<span id='horas'></span></li>
+	<li>Horário do pedido:<span id='horas'>".$hor."</span></li>
 		<li>Endereço a ser entregue:Bairro:".$row['Bairro'].",Rua:".$row['Rua'].",Número da casa:".$row['Ncasa']."</li>
 		<li>Nome do cliente:".$row['Nome']."</li>
 		<li>Número do pedido:".$Sessao."</li>

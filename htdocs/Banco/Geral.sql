@@ -56,6 +56,7 @@ Sessao int unique,
 Total int,
 ClienteID int,
 Statuss int default 1,
+horario varchar(15),
 foreign key(ClienteID) references Cliente(ClienteID)
 );
 #select * from carrinho inner join Produto where Carrinho.ProdutoID = Produto.ProdutoID;

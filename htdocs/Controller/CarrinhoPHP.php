@@ -1,6 +1,22 @@
+
+<script type="text/javascript">
+
+function rel(){
+ var dt = new Date();
+ var hora = dt.getHours() +":"+ dt.getMinutes() +":"+ dt.getSeconds();
+ // $("#ho").text("Horário do pedido:"+hora);
+
+document.getElementById("horario").value = hora;
+
+
+}
+window.addEventListener("load",rel);
+
+</script>
 <?php
 
 session_start();
+
 
 include_once('config.php');
 
@@ -31,6 +47,7 @@ $_SESSION['total'] = $total;
 mysqli_query($con,"INSERT * from Compra VALUES($sessao,$total,$ClienteID)");
 echo "Total:R$".$total;
 echo "<br> <form action='../Controller/CompraPHP.php'>
+<input style='display:none;' name='horario' id='horario'/>
 <br><button name='compra' value='$total'>CONFIRMAR COMPRA</button>
 </form>
 ";
