@@ -55,6 +55,7 @@ CompraID int primary key auto_increment,
 Sessao int unique,
 Total int,
 ClienteID int,
+Statuss int,
 foreign key(ClienteID) references Cliente(ClienteID)
 );
 #select * from carrinho inner join Produto where Carrinho.ProdutoID = Produto.ProdutoID;
