@@ -15,7 +15,7 @@ window.addEventListener("load",rel);
 </script>
 <?php
 
-session_start();
+@session_start();
 
 
 include_once('config.php');
@@ -44,7 +44,7 @@ while ($row = mysqli_fetch_array($dados)) {
 $total = $total +$row['Preco'];
 }}
 $_SESSION['total'] = $total;
-mysqli_query($con,"INSERT * from Compra VALUES($sessao,$total,$ClienteID)");
+@mysqli_query($con,"INSERT * from Compra VALUES($sessao,$total,$ClienteID)");
 echo "Total:R$".$total;
 echo "<br> <form action='../Controller/CompraPHP.php'>
 <input style='display:none;' name='horario' id='horario'/>

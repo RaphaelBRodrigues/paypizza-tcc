@@ -15,7 +15,7 @@ window.addEventListener("load",rel);
 
 </script> -->
 <?php
-include_once('config.php');
+@include_once('config.php');
 
 session_start();
 
@@ -44,7 +44,7 @@ $row = mysqli_fetch_array($dados);
 	<li>Horário do pedido:<span id='horas'>".$hor."</span></li>
 		<li>Endereço a ser entregue:Bairro:".$row['Bairro'].",Rua:".$row['Rua'].",Número da casa:".$row['Ncasa']."</li>
 		<li>Nome do cliente:".$row['Nome']."</li>
-		<li>Número do pedido:".$Sessao."</li>
+		<li>Número do pedido:".@$Sessao."</li>
 		<li>Total:R$".$total."</li>
 		<a href='../Views/Pedidos.php'>Veja seus pedidos ativos</a>
 	</ul>
