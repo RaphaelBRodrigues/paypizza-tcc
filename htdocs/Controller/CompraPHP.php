@@ -24,8 +24,9 @@ $Cliente = $_SESSION['ClienteID'];
 $total = $_GET['compra'];
 
 
+$hor = $_GET['horario'];
 
-if(mysqli_query($con,"INSERT INTO Compra(CompraID, Sessao, Total, ClienteID) VALUES(null,$Sessao,$total,$Cliente)")){
+if(mysqli_query($con,"INSERT INTO Compra(CompraID, Sessao, Total, ClienteID,horario) VALUES(null,$Sessao,$total,$Cliente,'$hor')")){
 
 	// echo $total; echo "<br>";
 	// echo $Cliente;echo "<br>";
@@ -36,8 +37,7 @@ $row = mysqli_fetch_array($dados);
 
 
 
-$hor = $_GET['horario'];
-	mysqli_query($con,"INSERT INTO Compra(CompraID, Sessao, Total, ClienteID,horario) VALUES(null,$Sessao,$total,$Cliente,'$hor'");
+	mysqli_query($con,"INSERT INTO Compra(CompraID, Sessao, Total, ClienteID,horario) VALUES(null,$Sessao,$total,$Cliente,'$hor')");
 	echo "Compra efetuada com sucesso
 
 	<ul>
