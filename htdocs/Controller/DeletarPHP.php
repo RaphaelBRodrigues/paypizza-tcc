@@ -1,5 +1,7 @@
 
 <?php
+//del apaga do Carrinho
+//apagar apaga de tudo
 include('config.php');
         include_once('UndefinedDeslogadoPHP.php');
 
