@@ -14,7 +14,7 @@ echo "
 	<li >Horário do pedido:<span id='horas'>".$row['horario']."</span></li>
 		<li>Endereço a ser entregue:Bairro:".$row['Bairro'].",Rua:".$row['Rua'].",Número da casa:".$row['Ncasa']."</li>
 		<li>Nome do cliente:".$row['Nome']."</li>
-	<li>Número do pedido:".@$Sessao."</li>
+	<li>Número do pedido:".$row['Sessao']."</li>
 		<li>Total:R$".$_SESSION['total']."</li>
 		<a href='../Views/Cardapio.php'>Volte para o cardápio</a>
 	</ul>
@@ -34,11 +34,18 @@ echo "
 	<li >Horário do pedido:<span id='horas'>".$row['horario']."</span></li>
 		<li>Endereço a ser entregue:Bairro:".$row['Bairro'].",Rua:".$row['Rua'].",Número da casa:".$row['Ncasa']."</li>
 		<li>Nome do cliente:".$row['Nome']."</li>
-		<li>Número do pedido:".$Sessao."</li>
+		<li>Número do pedido:".$row['Sessao']."</li>
 		<li>Total:R$".$_SESSION['total']."</li>
 		<a href='../Views/Cardapio.php'>Volte para o cardápio</a>
 	</ul>
 ";
+
+//Produtos REALIZADOS EM CADA COMPRA ESPECÍFICA 
+// $pro = mysqli_query($con,"SELECT * FROM Carrinho inner join produto where Sessao = ".$row['Sessao']."");
+// while($dutos = mysqli_fetch_array($pro)){
+// Echo "Produtos comprados nessa compra:";
+//   echo $dutos['Nome']."<br>";
+// }
 }
 ?>
 
