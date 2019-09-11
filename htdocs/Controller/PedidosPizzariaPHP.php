@@ -1,6 +1,10 @@
 <?php
 include("config.php");
-$dados = mysqli_query($con,"SELECT * FROM Compra INNER JOIN carrinho where Compra.Sessao = carrinho.Sessao and Compra.Statuss = 1");
+$tipo = $_GET['tipoPedido'];
+if (!empty($tipo)) {
+
+//Pedidos em progresso
+$dados = mysqli_query($con,"SELECT * FROM Compra INNER JOIN carrinho where Compra.Sessao = carrinho.Sessao and Compra.Statuss = $tipo");
 while($row = mysqli_fetch_array($dados)){
   echo "<br>Compra ID:".$row['CompraID'];
   echo "<br>Horário :".$row['horario'];
@@ -33,6 +37,12 @@ echo "<ul>";
 
 
 }
+
+
+}
+
+
+
 if (!empty($_GET["msg"])) {
   echo "<script>alert('O status do pedido'+".$_GET['msg']."+' foi alterado');</script>";
 }
