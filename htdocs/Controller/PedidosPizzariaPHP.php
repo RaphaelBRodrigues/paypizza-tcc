@@ -16,19 +16,24 @@ echo "<ul>";
   echo "</ul>";
 
   echo "<br>
-  <form action='../Controller/attStatusPHP.php' method='get'>
-  <select>
-  <option value='1' name='status'>Em processo</option>
-    <option value='2' name='status'>Pronto</option>
-    <option value='3' name='status'>À Caminho</option>
-    <option value='4' name='status'>Entregue</option>
-    <option value='0' name='status'>Cancelado</option>
+  <form action='../Controller/attStatusPHP.php' id='ob' method='get'>
+  <select  name='status' >
+  <option value='1' '>Em processo</option>
+    <option value='2'>Pronto</option>
+    <option value='3'>À Caminho</option>
+    <option value='4'>Entregue</option>
+    <option value='0' >Cancelado</option>
 
   </select>
-  <button type='submit'>Atualizar</button>
+  <button type='submit' name='ob' value='".$row["CompraID"]."'>Atualizar</button>
 </form>
   ";
 
   echo"<hr><br><br>";
+
+
+}
+if (!empty($_GET["msg"])) {
+  echo "<script>alert('O status do pedido'+".$_GET['msg']."+' foi alterado');</script>";
 }
  ?>

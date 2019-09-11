@@ -30,6 +30,6 @@ echo "Produto deletado com sucesso! <br>
 
 }
 }
-
+echo " <a href='../Views/Cardapio.php'><small>Voltar para o cardápio</small></a>"
 
 ?>
