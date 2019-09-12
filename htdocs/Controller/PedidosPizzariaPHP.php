@@ -1,13 +1,38 @@
 <?php
 include("config.php");
 $tipo = $_GET['tipoPedido'];
+
+if (empty($tipo)) {
+$_GET['tipoPedido'] = 1;
+$tipo = 1;
+}
+
+
 if (!empty($tipo)) {
+if ($tipo == 1) {
+  $status = "Em Processo";
+}
+if ($tipo == 2) {
+  $status = "Pronto";
+}
+if ($tipo == 3) {
+  $status = "A caminho";
+}
+if ($tipo == 4) {
+  $status = "Entregue";
+}
+if ($tipo == 0) {
+  $status = "Cancelado";
+}
+
+  echo "<h1>Status:".$status."</h1>";
 
 //Pedidos em progresso
-$dados = mysqli_query($con,"SELECT * FROM Compra INNER JOIN carrinho where Compra.Sessao = carrinho.Sessao and Compra.Statuss = $tipo");
+$dados = mysqli_query($con,"SELECT * FROM Compra INNER JOIN carrinho INNER JOIN cliente where cliente.clienteID = Compra.clienteID and Compra.Sessao = carrinho.Sessao and Compra.Statuss = $tipo");
 while($row = mysqli_fetch_array($dados)){
   echo "<br>Compra ID:".$row['CompraID'];
-  echo "<br>Horário :".$row['horario'];
+  echo "<br>Horário do pedido:".$row['horario'];
+  echo "<br>Nome do cliente :".$row['Nome'];
   echo "<br>Valor:".$row['Total'];
   $prod = mysqli_query($con,"SELECT * from carrinho inner join Produto  where Sessao = ".$row['Sessao']." and Carrinho.ProdutoID = Produto.ProdutoID ");
   echo "<BR>PRODUTOS:";
