@@ -49,4 +49,9 @@ list-style-type: none;
   .carrinho-img{
     height: 20em;
   }
+  .lis{
+    list-style: none;
+    font-size:1.5em;
+  }
 </style>
+
